@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.4.1">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="keywords" content="solr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用solr优化商品搜索效率">
+<meta property="og:url" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/index.html">
+<meta property="og:site_name" content="Do First">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/top.jpg">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/solrdownload.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/solrdownload2.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/mulu.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/ml.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/solrAdmin.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/core1.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/core2.jpg">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/core2p.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/schema.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/import.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/query.png">
+<meta property="og:updated_time" content="2019-03-06T06:08:40.429Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用solr优化商品搜索效率">
+<meta name="twitter:image" content="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/top.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Do First" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>使用solr优化商品搜索效率 | Do First</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="http://www.jingxu.top" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Do First</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xu Jing">
+      <meta itemprop="description" content="人家说了再做，我是做了再说，人家说了也不一定做，我是做了也不一定说。">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Do First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用solr优化商品搜索效率
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-02 09:57:26" itemprop="dateCreated datePublished" datetime="2018-11-02T09:57:26+08:00">2018-11-02</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 14:08:40" itemprop="dateModified" datetime="2019-03-06T14:08:40+08:00">2019-03-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/搜索引擎/" itemprop="url" rel="index"><span itemprop="name">搜索引擎</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+          
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2018/11/02/使用solr优化商品搜索效率/top.jpg" alt=""><a id="more"></a></p>
+<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>我们的一个电商项目，之前前台使用的搜索接口是通过商品名称或者编号去数据库检索，返回给前台一系列符合的商品集合，<br>能基本完成搜索的功能，但是当并发量高的的时候会对数据库造成不小的压力，而且查询速率也不是很好，所以我这周接到了<br>这个任务，优化这个搜索功能，尝试使用solr去解决。  </p>
+<h2 id="二、solr介绍"><a href="#二、solr介绍" class="headerlink" title="二、solr介绍"></a>二、solr介绍</h2><h3 id="什么是solr"><a href="#什么是solr" class="headerlink" title="什么是solr"></a>什么是solr</h3><blockquote>
+<p>Solr是一个独立的企业级搜索应用服务器，它对外提供类似于Web-service的API接口。用户可以通过http请求，向搜索引擎服务器提交一定格式的XML文件，生成索引；也可以通过Http Get操作提出查找请求，并得到XML格式的返回结果。</p>
+</blockquote>
+<h3 id="为什么使用solr"><a href="#为什么使用solr" class="headerlink" title="为什么使用solr"></a>为什么使用solr</h3><ul>
+<li>solr是将整个索引操作功能封装好了的搜索引擎系统(企业级搜索引擎产品)</li>
+<li>solr可以部署到单独的服务器上(WEB服务)，它可以提供服务，我们的业务系统就只要发送请求，接收响应即可，降低了业务系统的负载</li>
+<li>solr部署在专门的服务器上，它的索引库就不会受业务系统服务器存储空间的限制</li>
+<li>solr支持分布式集群，索引服务的容量和能力可以线性扩展</li>
+</ul>
+<h3 id="solr的工作机制"><a href="#solr的工作机制" class="headerlink" title="solr的工作机制"></a>solr的工作机制</h3><ul>
+<li>solr就是在lucene工具包的基础之上进行了封装，而且是以web服务的形式对外提供索引功能</li>
+<li>业务系统需要使用到索引的功能（建索引，查索引）时，只要发出http请求，并将返回数据进行解析即可</li>
+<li>Solr 是Apache下的一个顶级开源项目，采用Java开发，它是基于Lucene的全文搜索服务器。Solr提供了比Lucene更为丰富的查询语言，同时实现了可配置、可扩展，并对索引、搜索性能进行了优化。</li>
+<li>Solr可以独立运行，运行在Jetty、Tomcat等这些Servlet容器中，Solr 索引的实现方法很简单，用 POST 方法向 Solr 服务器发送一个描述 Field 及其内容的 XML 文档，Solr根据xml文档添加、删除、更新索引 。Solr 搜索只需要发送 HTTP GET 请求，然后对 Solr 返回Xml、json等格式的查询结果进行解析，组织页面布局。Solr不提供构建UI的功能，Solr提供了一个管理界面，通过管理界面可以查询Solr的配置和运行情况。</li>
+</ul>
+<h2 id="三、solr的使用"><a href="#三、solr的使用" class="headerlink" title="三、solr的使用"></a>三、solr的使用</h2><h3 id="安装Apache-Solr"><a href="#安装Apache-Solr" class="headerlink" title="安装Apache Solr"></a>安装Apache Solr</h3><p>下载最新版本的<a href="http://lucene.apache.org/solr/downloads.html" target="_blank" rel="noopener">Apache Solr</a><br><img src="/2018/11/02/使用solr优化商品搜索效率/solrdownload.png" alt=""><br><img src="/2018/11/02/使用solr优化商品搜索效率/solrdownload2.png" alt="">  </p>
+<p>点击进行下载，下载进行解压，目录结构如图所示:<br><img src="/2018/11/02/使用solr优化商品搜索效率/mulu.png" alt="">  </p>
+<p>进入bin目录，使用命令行输入<br><code>solr start</code><br><img src="/2018/11/02/使用solr优化商品搜索效率/ml.png" alt=""><br>在浏览器打开 <code>http://localhost:8983/</code>进入solr 管理界面<br><img src="/2018/11/02/使用solr优化商品搜索效率/solrAdmin.png" alt=""><br>这样solr 的安装就完成啦</p>
+<blockquote>
+<p>solr 启动、停止、重启命令<br><code>solr start -p 端口号</code><br><code>solr stop -all</code><br><code>solr restart -p 端口号</code></p>
+</blockquote>
+<h3 id="配置Apache-Solr"><a href="#配置Apache-Solr" class="headerlink" title="配置Apache Solr"></a>配置Apache Solr</h3><h4 id="创建core实例"><a href="#创建core实例" class="headerlink" title="创建core实例"></a>创建core实例</h4><ul>
+<li>core简介：简单说core就是solr的一个实例，一个solr服务下可以有多个core，每个core下都有自己的索引库和与之相应的配置文件，所以在操作solr创建索引之前要创建一个core，因为索引都存在core下面</li>
+<li>core创建：core的创建方式有很多种一下列出两种比较方便的。<ul>
+<li>在bin目录下执行solr create –c name，创建一个core，默认创建出来的位置如下图<br><img src="/2018/11/02/使用solr优化商品搜索效率/core1.png" alt="">  </li>
+<li>第二种方式是直接使用AdminUI页面创建一个core，如下图<br><img src="/2018/11/02/使用solr优化商品搜索效率/core2.jpg" alt=""><br>使用第二种方式会出现一个问题<br><img src="/2018/11/02/使用solr优化商品搜索效率/core2p.png" alt=""><br>需要在将目录<code>\solr-7.5.0\server\solr\configsets\_default</code>目录下的 conf 拷贝到刚刚新建的core下面 重启solr服务就好了</li>
+</ul>
+</li>
+</ul>
+<h4 id="配置schema"><a href="#配置schema" class="headerlink" title="配置schema"></a>配置schema</h4><ul>
+<li><p>schema简介：  schema是用来告诉solr如何建立索引的，他的配置围绕着一个schema配置文件，这个配置文件决定着solr如何建立索引，每个字段的数据类型，分词方式等，老版本的schema配置文件的名字叫做schema.xml他的配置方式就是手工编辑，但是现在新版本的schema配置文件的名字叫做managed-schema，他的配置方式不再是用手工编辑而是使用schemaAPI来配置，官方给出的解释是使用schemaAPI修改managed-schema内容后不需要重新加载core或者重启solr更适合在生产环境下维护，如果使用手工编辑的方式更改配置不进行重加载core有可能会造成配置丢失，配置文件所在的路径如下图：<br><img src="/2018/11/02/使用solr优化商品搜索效率/schema.png" alt=""><br>直接贴上我的代码吧 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;schema name=&quot;example-DIH-db&quot; version=&quot;1.6&quot;&gt;</span><br><span class="line">		&lt;!--自己查询的一些数据--&gt;</span><br><span class="line">     	&lt;field name=&quot;id&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;</span><br><span class="line">    	&lt;field name=&quot;userId&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;spuNo&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;categoryId&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;name&quot; type=&quot;text_ik&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;type&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;labels&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;price&quot; type=&quot;double&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;fixedPrice&quot; type=&quot;double&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;minPrice&quot; type=&quot;double&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;maxPrice&quot; type=&quot;double&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;pics&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;initialSales&quot; type=&quot;int&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;realSales&quot; type=&quot;int&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;onSale&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;onSaleTime&quot; type=&quot;date&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;isMul&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;expressTempId&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;stock&quot; type=&quot;int&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;stockType&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;priority&quot; type=&quot;int&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;fatherCategoryId&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;fromLibId&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;vipPriceEnable&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;promotionType&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;createTime&quot; type=&quot;date&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;lastUpdateTime&quot; type=&quot;date&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">    	&lt;field name=&quot;isDel&quot; type=&quot;boolean&quot; indexed=&quot;true&quot; stored=&quot;true&quot;/&gt;</span><br><span class="line">		&lt;!--solr自带的数据--&gt;</span><br><span class="line">    	&lt;field name=&quot;_version_&quot; type=&quot;long&quot; indexed=&quot;false&quot; stored=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;field name=&quot;text&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;false&quot; multiValued=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;field name=&quot;_root_&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;false&quot; docValues=&quot;false&quot; /&gt;</span><br><span class="line">		&lt;!--主键--&gt;</span><br><span class="line">    	&lt;uniqueKey&gt;id&lt;/uniqueKey&gt;</span><br><span class="line">		&lt;!--基本的一些数据类型  solr不支持数据库的bigDecimal 和tinyint 用double和boolean代替--&gt;</span><br><span class="line">        &lt;fieldType name=&quot;string&quot; class=&quot;solr.StrField&quot; sortMissingLast=&quot;true&quot; /&gt;</span><br><span class="line">        &lt;fieldType name=&quot;int&quot; class=&quot;solr.TrieIntField&quot; docValues=&quot;true&quot; precisionStep=&quot;0&quot; positionIncrementGap=&quot;0&quot;/&gt;</span><br><span class="line">        &lt;fieldType name=&quot;long&quot; class=&quot;solr.TrieLongField&quot; docValues=&quot;true&quot; precisionStep=&quot;0&quot; positionIncrementGap=&quot;0&quot;/&gt;</span><br><span class="line">        &lt;fieldType name=&quot;date&quot; class=&quot;solr.TrieDateField&quot; docValues=&quot;true&quot; precisionStep=&quot;0&quot; positionIncrementGap=&quot;0&quot;/&gt;</span><br><span class="line">        &lt;fieldType name=&quot;double&quot; class=&quot;solr.TrieDoubleField&quot; docValues=&quot;true&quot; precisionStep=&quot;0&quot; positionIncrementGap=&quot;0&quot;/&gt;</span><br><span class="line">         &lt;fieldType name=&quot;boolean&quot; class=&quot;solr.BoolField&quot; omitNorms=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;!-- ik分词器 --&gt;</span><br><span class="line">        &lt;fieldType name=&quot;text_ik&quot; class=&quot;solr.TextField&quot;&gt;</span><br><span class="line">        &lt;analyzer type=&quot;index&quot;&gt;</span><br><span class="line">            &lt;tokenizer class=&quot;org.wltea.analyzer.lucene.IKTokenizerFactory&quot; useSmart=&quot;false&quot; conf=&quot;ik.conf&quot;/&gt;</span><br><span class="line">            &lt;filter class=&quot;solr.LowerCaseFilterFactory&quot;/&gt;</span><br><span class="line">        &lt;/analyzer&gt;</span><br><span class="line">        &lt;analyzer type=&quot;query&quot;&gt;</span><br><span class="line">            &lt;tokenizer class=&quot;org.wltea.analyzer.lucene.IKTokenizerFactory&quot; useSmart=&quot;true&quot; conf=&quot;ik.conf&quot;/&gt;</span><br><span class="line">            &lt;filter class=&quot;solr.LowerCaseFilterFactory&quot;/&gt;</span><br><span class="line">         &lt;/analyzer&gt;</span><br><span class="line">        &lt;/fieldType&gt;</span><br><span class="line"></span><br><span class="line">&lt;/schema&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置IK Analyzer中文分词器<br>先下载 <a href="https://pan.baidu.com/s/19gRoDOXjmOaqkvGACG_8Pw" target="_blank" rel="noopener">IK Analyzer</a>中文分词器架包及相关配置文件。 </p>
+<ul>
+<li>准备IK中文分词器环境<br> 把IK中文分词器架包复制到solr项目的WEB-INF/lib目录下<br> 把IK分词器相关配置文件复制到solr项目WEB-INF/classes/ 目录下 (没有自己新建)</li>
+</ul>
+</li>
+</ul>
+<h4 id="配置solrconfig"><a href="#配置solrconfig" class="headerlink" title="配置solrconfig"></a>配置solrconfig</h4><p>配置搜索建议，在solrconfig.xml找到suggest<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;searchComponent class=&quot;solr.SpellCheckComponent&quot; name=&quot;suggest&quot;&gt;</span><br><span class="line">    &lt;str name=&quot;queryAnalyzerFieldType&quot;&gt;string&lt;/str&gt;</span><br><span class="line">    &lt;lst name=&quot;spellchecker&quot;&gt;</span><br><span class="line">      &lt;str name=&quot;name&quot;&gt;suggest&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;classname&quot;&gt;org.apache.solr.spelling.suggest.Suggester&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;lookupImpl&quot;&gt;org.apache.solr.spelling.suggest.tst.TSTLookup&lt;/str&gt;</span><br><span class="line">      &lt;!--建议字段名--&gt;</span><br><span class="line">      &lt;str name=&quot;field&quot;&gt;name&lt;/str&gt;</span><br><span class="line">      &lt;!-- the indexed field to derive suggestions from --&gt;</span><br><span class="line">      &lt;float name=&quot;threshold&quot;&gt;0.0001&lt;/float&gt;</span><br><span class="line">      &lt;str name=&quot;spellcheckIndexDir&quot;&gt;spellchecker&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;comparatorClass&quot;&gt;freq&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;buildOnOptimize&quot;&gt;true&lt;/str&gt;</span><br><span class="line">      &lt;!--&lt;str name=&quot;buildOnCommit&quot;&gt;true&lt;/str&gt;--&gt;</span><br><span class="line">    &lt;/lst&gt;</span><br><span class="line">  &lt;/searchComponent&gt;</span><br><span class="line">  &lt;requestHandler class=&quot;org.apache.solr.handler.component.SearchHandler&quot;</span><br><span class="line">                  name=&quot;/suggest&quot;&gt;</span><br><span class="line">    &lt;lst name=&quot;defaults&quot;&gt;</span><br><span class="line">      &lt;str name=&quot;spellcheck&quot;&gt;true&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;spellcheck.dictionary&quot;&gt;suggest&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;spellcheck.onlyMorePopular&quot;&gt;true&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;spellcheck.extendedResults&quot;&gt;false&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;spellcheck.count&quot;&gt;10&lt;/str&gt;</span><br><span class="line">      &lt;str name=&quot;spellcheck.collate&quot;&gt;true&lt;/str&gt;</span><br><span class="line">    &lt;/lst&gt;</span><br><span class="line">    &lt;arr name=&quot;components&quot;&gt;</span><br><span class="line">      &lt;str&gt;suggest&lt;/str&gt;</span><br><span class="line">    &lt;/arr&gt;</span><br><span class="line">  &lt;/requestHandler&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="数据库数据导入"><a href="#数据库数据导入" class="headerlink" title="数据库数据导入"></a>数据库数据导入</h4><ul>
+<li><p>修改soreconfig.xml<br>在soreconfig.xml的<requesthandler name="/select" class="solr.SearchHandler">上面添加如下代码：</requesthandler></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;requestHandler name=&quot;/dataimport&quot; class=&quot;solr.DataImportHandler&quot;&gt;</span><br><span class="line">    &lt;lst name=&quot;defaults&quot;&gt;</span><br><span class="line">      &lt;str name=&quot;config&quot;&gt;db-data-config.xml&lt;/str&gt;</span><br><span class="line">    &lt;/lst&gt;</span><br><span class="line">  &lt;/requestHandler&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在同级目录下创建data-config.xml文件，然后配置数据库相关属性<br>注意：这里面配置的属性需要和上文中 schema中配置的一样</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;dataConfig&gt;</span><br><span class="line">    &lt;dataSource type=&quot;JdbcDataSource&quot;</span><br><span class="line">                driver=&quot;com.mysql.jdbc.Driver&quot;</span><br><span class="line">                url=&quot;jdbc:mysql://127.0.0.1:3306/saas?useUnicode=true&amp;amp;characterEncoding=utf8&amp;amp;useSSL=false&quot;</span><br><span class="line">                user=&quot;root&quot;</span><br><span class="line">                password=&quot;123456&quot;/&gt;</span><br><span class="line">    &lt;document&gt;</span><br><span class="line">        &lt;entity dataSource=&quot;JdbcDataSource&quot; name=&quot;mall_product&quot; query=&quot;select</span><br><span class="line">        mp.*,mo.promotionType</span><br><span class="line">        from mall_product mp</span><br><span class="line">        LEFT JOIN mall_promotion mo ON mp.id = mo.productId</span><br><span class="line">        AND mo.`status` = 0</span><br><span class="line">        where mp.isDel = 0; &quot; pk=&quot;id&quot;&gt;</span><br><span class="line">            &lt;field column=&quot;id&quot; name=&quot;id&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;userId&quot; name=&quot;userId&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;spuNo&quot; name=&quot;spuNo&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;categoryId&quot; name=&quot;categoryId&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;name&quot; name=&quot;name&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;type&quot; name=&quot;type&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;labels&quot; name=&quot;labels&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;price&quot; name=&quot;price&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;fixedPrice&quot; name=&quot;fixedPrice&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;minPrice&quot; name=&quot;minPrice&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;maxPrice&quot; name=&quot;maxPrice&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;pics&quot; name=&quot;pics&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;initialSales&quot; name=&quot;initialSales&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;realSales&quot; name=&quot;realSales&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;onSale&quot; name=&quot;onSale&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;onSaleTime&quot; name=&quot;onSaleTime&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;isMul&quot; name=&quot;isMul&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;expressTempId&quot; name=&quot;expressTempId&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;stock&quot; name=&quot;stock&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;stockType&quot; name=&quot;stockType&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;priority&quot; name=&quot;priority&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;fatherCategoryId&quot; name=&quot;fatherCategoryId&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;fromLibId&quot; name=&quot;fromLibId&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;vipPriceEnable&quot; name=&quot;vipPriceEnable&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;promotionType&quot; name=&quot;promotionType&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;createTime&quot; name=&quot;createTime&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;lastUpdateTime&quot; name=&quot;lastUpdateTime&quot;/&gt;</span><br><span class="line">            &lt;field column=&quot;isDel&quot; name=&quot;isDel&quot;/&gt;</span><br><span class="line">        &lt;/entity&gt;</span><br><span class="line">    &lt;/document&gt;</span><br><span class="line">&lt;/dataConfig&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拷贝jar<br>拷贝solr-7.5.0\dist路径下的solr-dataimporthandler-7.5.0.jar，solr-dataimporthandler-extras-7.5.0.jar 到 solr-7.5.0\server\solr-webapp\webapp\WEB-INF\lib目录下<br>同时拷贝mysql-connector-java-5.1.40.jar链接jar到该目录下   </p>
+</li>
+<li><p>数据导入<br>重启solr 进入管理页面<br><img src="/2018/11/02/使用solr优化商品搜索效率/import.png" alt=""><br>然后就能看见你要的数据了<br><img src="/2018/11/02/使用solr优化商品搜索效率/query.png" alt=""></p>
+</li>
+</ul>
+<h2 id="四、springboot集成solr"><a href="#四、springboot集成solr" class="headerlink" title="四、springboot集成solr"></a>四、springboot集成solr</h2><ul>
+<li><p>引入jar包</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">&lt;groupId&gt;org.springframework.data&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;spring-data-solr&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置文件</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  data:</span><br><span class="line">    solr:</span><br><span class="line">      host: http://127.0.0.1:8983/solr</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>相关代码 </p>
+<pre><code class="java"><span class="meta">@Service</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductSolrServiceImpl</span> <span class="keyword">implements</span> <span class="title">ProductSolrService</span> </span>{
+  <span class="meta">@Resource</span>
+  <span class="keyword">private</span> PromotionService promotionService;
+  <span class="meta">@Resource</span>
+  <span class="keyword">private</span> SolrClient solrClient;
+
+  <span class="meta">@Override</span>
+  <span class="function"><span class="keyword">public</span> String <span class="title">saveOrUpdate</span><span class="params">(Product product)</span> </span>{
+      <span class="keyword">try</span> {
+          SolrInputDocument doc = <span class="keyword">new</span> SolrInputDocument();
+          doc.setField(<span class="string">"id"</span>, product.getId());
+          doc.setField(<span class="string">"userId"</span>, product.getUserId());
+          doc.setField(<span class="string">"spuNo"</span>, product.getSpuNo());
+          doc.setField(<span class="string">"categoryId"</span>, product.getCategoryId());
+          doc.setField(<span class="string">"name"</span>, product.getName());
+          doc.setField(<span class="string">"type"</span>, product.getType());
+          doc.setField(<span class="string">"labels"</span>, product.getLabels());
+          <span class="keyword">if</span> (product.getPrice() != <span class="keyword">null</span>) {
+              doc.setField(<span class="string">"price"</span>, product.getPrice().doubleValue());
+          }
+          <span class="keyword">if</span> (product.getFixedPrice() != <span class="keyword">null</span>) {
+              doc.setField(<span class="string">"fixedPrice"</span>, product.getFixedPrice().doubleValue());
+          }
+          <span class="keyword">if</span> (product.getMinPrice() != <span class="keyword">null</span>) {
+              doc.setField(<span class="string">"minPrice"</span>, product.getMinPrice().doubleValue());
+          }
+          <span class="keyword">if</span> (product.getMaxPrice() != <span class="keyword">null</span>) {
+              doc.setField(<span class="string">"maxPrice"</span>, product.getMaxPrice().doubleValue());
+          }
+          doc.setField(<span class="string">"pics"</span>, product.getPics());
+          doc.setField(<span class="string">"initialSales"</span>, product.getInitialSales());
+          doc.setField(<span class="string">"realSales"</span>, product.getRealSales());
+          doc.setField(<span class="string">"onSale"</span>, product.getOnSale());
+          doc.setField(<span class="string">"onSaleTime"</span>, product.getOnSaleTime());
+          doc.setField(<span class="string">"isMul"</span>, product.getIsMul());
+          doc.setField(<span class="string">"expressTempId"</span>, product.getExpressTempId());
+          doc.setField(<span class="string">"stock"</span>, product.getStock());
+          doc.setField(<span class="string">"stockType"</span>, product.getStockType());
+          doc.setField(<span class="string">"priority"</span>, product.getPriority());
+          doc.setField(<span class="string">"fatherCategoryId"</span>, product.getFatherCategoryId());
+          doc.setField(<span class="string">"fromLibId"</span>, product.getFromLibId());
+          doc.setField(<span class="string">"vipPriceEnable"</span>, product.getVipPriceEnable());
+          doc.setField(<span class="string">"createTime"</span>, product.getCreateTime());
+          doc.setField(<span class="string">"lastUpdateTime"</span>, product.getLastUpdateTime());
+          doc.setField(<span class="string">"isDel"</span>, <span class="keyword">false</span>);
+          Promotion promotion = promotionService.findByProductId(product.getId());
+          <span class="keyword">if</span> (<span class="keyword">null</span> != promotion) {
+              doc.setField(<span class="string">"promotionType"</span>, promotion.getPromotionType());
+          }
+          solrClient.add(<span class="string">"mall_product"</span>, doc);
+          solrClient.commit(<span class="string">"mall_product"</span>);
+          <span class="keyword">return</span> <span class="string">"success"</span>;
+      } <span class="keyword">catch</span> (Exception e) {
+          e.printStackTrace();
+      }
+      <span class="keyword">return</span> <span class="string">"error"</span>;
+  }
+
+  <span class="meta">@Override</span>
+  <span class="function"><span class="keyword">public</span> String <span class="title">delete</span><span class="params">(String id)</span> </span>{
+      <span class="keyword">try</span> {
+          solrClient.deleteById(<span class="string">"mall_product"</span>, id);
+          solrClient.commit(<span class="string">"mall_product"</span>);
+          <span class="keyword">return</span> <span class="string">"success"</span>;
+      } <span class="keyword">catch</span> (Exception e) {
+          e.printStackTrace();
+      }
+      <span class="keyword">return</span> <span class="string">"error"</span>;
+  }
+
+  <span class="meta">@Override</span>
+  <span class="function"><span class="keyword">public</span> String <span class="title">deleteAll</span><span class="params">()</span> </span>{
+      <span class="keyword">try</span> {
+          solrClient.deleteByQuery(<span class="string">"mall_product"</span>, <span class="string">"*:*"</span>);
+          solrClient.commit(<span class="string">"mall_product"</span>);
+          <span class="keyword">return</span> <span class="string">"success"</span>;
+      } <span class="keyword">catch</span> (Exception e) {
+          e.printStackTrace();
+      }
+      <span class="keyword">return</span> <span class="string">"error"</span>;
+  }
+
+  <span class="meta">@Override</span>
+  <span class="function"><span class="keyword">public</span> String <span class="title">getById</span><span class="params">(String id)</span> </span>{
+      <span class="keyword">try</span> {
+          SolrDocument document = solrClient.getById(<span class="string">"mall_product"</span>, id);
+          <span class="keyword">return</span> document.toString();
+      } <span class="keyword">catch</span> (Exception e) {
+          e.printStackTrace();
+      }
+      <span class="keyword">return</span> <span class="keyword">null</span>;
+  }
+
+  <span class="meta">@Override</span>
+  <span class="function"><span class="keyword">public</span> List&lt;ProductSolrEntity&gt; <span class="title">search</span><span class="params">(ProductSolrQuery productSolrQuery)</span> </span>{
+      <span class="keyword">try</span> {
+          SolrQuery params = <span class="keyword">new</span> SolrQuery();
+
+          <span class="comment">//查询条件, 这里的 q 对应 下面图片标红的地方</span>
+          params.setQuery(<span class="string">"name:"</span> + productSolrQuery.getName() + <span class="string">" OR "</span> + <span class="string">"spuNo:"</span> + productSolrQuery.getName());
+
+          <span class="comment">//过滤条件</span>
+          params.addFilterQuery(<span class="string">"userId:"</span> + productSolrQuery.getUserId());
+          params.addFilterQuery(<span class="string">"onSale:T"</span>);
+          <span class="keyword">if</span> (StringUtils.isNotBlank(productSolrQuery.getFatherCategoryId())) {
+              params.addFilterQuery(<span class="string">"fatherCategoryId:"</span> + productSolrQuery.getFatherCategoryId());
+          }
+          <span class="keyword">if</span> (StringUtils.isNotBlank(productSolrQuery.getCategoryId())) {
+              params.addFilterQuery(<span class="string">"categoryId:"</span> + productSolrQuery.getCategoryId());
+          }
+          <span class="comment">//排序</span>
+          params.addSort(productSolrQuery.getSortFiled(), productSolrQuery.getSort());
+
+          <span class="comment">//分页</span>
+          params.setStart(productSolrQuery.getPage());
+          params.setRows(productSolrQuery.getPageSize());
+
+          QueryResponse queryResponse = solrClient.query(<span class="string">"mall_product"</span>, params);
+
+          List&lt;ProductSolrEntity&gt; beans = queryResponse.getBeans(ProductSolrEntity.class);
+          <span class="keyword">return</span> beans;
+      } <span class="keyword">catch</span> (Exception e) {
+          e.printStackTrace();
+      }
+      <span class="keyword">return</span> <span class="keyword">null</span>;
+  }
+
+  <span class="meta">@Override</span>
+  <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">suggest</span><span class="params">(String name)</span> </span>{
+      <span class="keyword">try</span> {
+          SolrQuery query = <span class="keyword">new</span> SolrQuery();
+          <span class="comment">// 请求到suggest中</span>
+          query.set(<span class="string">"qt"</span>, <span class="string">"/suggest"</span>);
+          <span class="comment">// 查询的词</span>
+          query.set(<span class="string">"spellcheck.q"</span>, name);
+          <span class="comment">// 返回数量</span>
+          query.set(<span class="string">"spellcheck.count"</span>, <span class="string">"10"</span>);
+          QueryResponse rsp = solrClient.query(<span class="string">"mall_product"</span>, query);
+
+          <span class="comment">// 上面取结果的代码</span>
+          <span class="comment">// 获取拼写检查的结果集</span>
+          List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();
+          SpellCheckResponse re = rsp.getSpellCheckResponse();
+          <span class="keyword">if</span> (re != <span class="keyword">null</span>) {
+              <span class="keyword">for</span> (SpellCheckResponse.Suggestion s : re.getSuggestions()) {
+                  <span class="comment">// 获取所有 的检索词</span>
+                  List&lt;String&gt; alternatives = s.getAlternatives();
+                  list.addAll(alternatives);
+              }
+          }
+          <span class="keyword">return</span> list;
+      } <span class="keyword">catch</span> (Exception e) {
+          e.printStackTrace();
+      }
+      <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();
+  }
+}
+</code></pre>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2018/11/02/使用solr优化商品搜索效率/">使用solr优化商品搜索效率</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Xu Jing 的个人博客">Xu Jing</a></p>
+  <p><span>发布时间:</span>2018年11月02日 - 09:11</p>
+  <p><span>最后更新:</span>2019年03月06日 - 14:03</p>
+  <p><span>原始链接:</span><a href="/2018/11/02/使用solr优化商品搜索效率/" title="使用solr优化商品搜索效率">http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jingxu.top/2018/11/02/使用solr优化商品搜索效率/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+          
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/solr/" rel="tag"><i class="fa fa-tag"></i> solr</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/12/客服系统一/" rel="next" title="客服系统一">
+                <i class="fa fa-chevron-left"></i> 客服系统一
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/02/使用javaMail做异常提醒/" rel="prev" title="使用javaMail做异常提醒">
+                使用javaMail做异常提醒 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+     <div id="gitalk-container"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/head.jpg"
+                alt="Xu Jing" />
+            
+              <p class="site-author-name" itemprop="name">Xu Jing</p>
+              <p class="site-description motion-element" itemprop="description">人家说了再做，我是做了再说，人家说了也不一定做，我是做了也不一定说。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/xujinga" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/3885320000/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、前言"><span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、solr介绍"><span class="nav-text">二、solr介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是solr"><span class="nav-text">什么是solr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用solr"><span class="nav-text">为什么使用solr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#solr的工作机制"><span class="nav-text">solr的工作机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、solr的使用"><span class="nav-text">三、solr的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Apache-Solr"><span class="nav-text">安装Apache Solr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Apache-Solr"><span class="nav-text">配置Apache Solr</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建core实例"><span class="nav-text">创建core实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置schema"><span class="nav-text">配置schema</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置solrconfig"><span class="nav-text">配置solrconfig</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库数据导入"><span class="nav-text">数据库数据导入</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、springboot集成solr"><span class="nav-text">四、springboot集成solr</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xu Jing</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      总访客量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '23bd7ca53abc651064fc',
+          clientSecret: '2095b60025750e5c673b337c45cf4831aa0873b1',
+          repo: 'comments',
+          owner: 'xujinga',
+          admin: ['xujinga'],
+          id: ['使用solr优化商品搜索效率'],
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')
+       </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

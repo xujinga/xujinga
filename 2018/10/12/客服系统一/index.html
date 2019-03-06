@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.4.1">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="keywords" content="im">
+<meta property="og:type" content="article">
+<meta property="og:title" content="客服系统一">
+<meta property="og:url" content="http://www.jingxu.top/2018/10/12/客服系统一/index.html">
+<meta property="og:site_name" content="Do First">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/top.jpg">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/netty.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/mongo.jpg">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/zuceio.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/nozuceio.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/bio.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/nio.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/5.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/copy1.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/0copy.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/channel.png">
+<meta property="og:image" content="http://www.jingxu.top/2018/10/12/客服系统一/buff.png">
+<meta property="og:updated_time" content="2019-03-06T06:08:40.452Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="客服系统一">
+<meta name="twitter:image" content="http://www.jingxu.top/2018/10/12/客服系统一/top.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Do First" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://www.jingxu.top/2018/10/12/客服系统一/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>客服系统一 | Do First</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="http://www.jingxu.top" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Do First</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jingxu.top/2018/10/12/客服系统一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xu Jing">
+      <meta itemprop="description" content="人家说了再做，我是做了再说，人家说了也不一定做，我是做了也不一定说。">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Do First">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">客服系统一
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-12 14:07:38" itemprop="dateCreated datePublished" datetime="2018-10-12T14:07:38+08:00">2018-10-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-06 14:08:40" itemprop="dateModified" datetime="2019-03-06T14:08:40+08:00">2019-03-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/客服系统/" itemprop="url" rel="index"><span itemprop="name">客服系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+          
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2018/10/12/客服系统一/top.jpg" alt=""><a id="more"></a></p>
+<h2 id="一、技术栈选择"><a href="#一、技术栈选择" class="headerlink" title="一、技术栈选择"></a>一、技术栈选择</h2><h3 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h3><p><img src="/2018/10/12/客服系统一/netty.png" alt=""><br>使用<a href="https://netty.io/" target="_blank" rel="noopener">netty</a>做服务器Socket通信框架。</p>
+<h3 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h3><p><img src="/2018/10/12/客服系统一/mongo.jpg" alt=""><br>使用<a href="https://www.mongodb.com/" target="_blank" rel="noopener">MongoDB</a>做用户的会话消息存储</p>
+<h2 id="二、Netty介绍"><a href="#二、Netty介绍" class="headerlink" title="二、Netty介绍"></a>二、Netty介绍</h2><h3 id="什么是Netty？"><a href="#什么是Netty？" class="headerlink" title="什么是Netty？"></a>什么是Netty？</h3><blockquote>
+<p>Netty 是一个利用 Java 的高级网络的能力，<br>隐藏其背后的复杂性而提供一个易于使用的 API 的客户端/服务器框架。<br>Netty 是一个广泛使用的 Java 网络编程框架,<a href="https://www.java.net/dukeschoice/2011" target="_blank" rel="noopener">Netty 在 2011 年获得了Duke’s Choice Award</a>。<br>它活跃和成长于用户社区，像大型公司 Facebook 和 Instagram 以及流行 开源项目如 Infinispan, HornetQ, Vert.x, Apache Cassandra 和 Elasticsearch 等，都利用其强大的对于网络抽象的核心代码。</p>
+</blockquote>
+<h3 id="为什么Netty受欢迎？"><a href="#为什么Netty受欢迎？" class="headerlink" title="为什么Netty受欢迎？"></a>为什么Netty受欢迎？</h3><h4 id="并发高"><a href="#并发高" class="headerlink" title="并发高"></a>并发高</h4><p>Netty是一款基于NIO（Nonblocking I/O，非阻塞IO）开发的网络通信框架，对比于BIO（Blocking I/O，阻塞IO），<br>他的并发性能得到了很大提高，两张图让你了解BIO和NIO的区别：<br><img src="/2018/10/12/客服系统一/zuceio.png" alt="阻塞IO的通信方式"></p>
+<p><img src="/2018/10/12/客服系统一/nozuceio.png" alt="非阻塞IO的通信方式"><br>从这两图可以看出，NIO的单线程能处理连接的数量比BIO要高出很多，而为什么单线程能处理更多的连接呢？原因就是图二中出现的Selector。<br>当一个连接建立之后，他有两个步骤要做，第一步是接收完客户端发过来的全部数据，第二步是服务端处理完请求业务之后返回response给客户端。NIO和BIO的区别主要是在第一步。<br>在BIO中，等待客户端发数据这个过程是阻塞的，这样就造成了一个线程只能处理一个请求的情况，而机器能支持的最大线程数是有限的，这就是为什么BIO不能支持高并发的原因。<br>而NIO中，当一个Socket建立好之后，Thread并不会阻塞去接受这个Socket，而是将这个请求交给Selector，Selector会不断的去遍历所有的Socket，一旦有一个Socket建立完成，他会通知Thread，然后Thread处理完数据再返回给客户端——这个过程是阻塞的，这样就能让一个Thread处理更多的请求了。<br>下面两张图是基于BIO的处理流程和netty的处理流程，辅助你理解两种方式的差别：<br><img src="/2018/10/12/客服系统一/bio.png" alt="BIO处理流程"></p>
+<p><img src="/2018/10/12/客服系统一/nio.png" alt="NIO处理流程"><br>除了BIO和NIO之外，还有一些其他的IO模型，下面这张图就表示了五种IO模型的处理流程：<br><img src="/2018/10/12/客服系统一/5.png" alt="五种常见的IO模型">  </p>
+<ul>
+<li>BIO，同步阻塞IO，阻塞整个步骤，如果连接少，他的延迟是最低的，因为一个线程只处理一个连接，适用于少连接且延迟低的场景，比如说数据库连接。</li>
+<li>NIO，同步非阻塞IO，阻塞业务处理但不阻塞数据接收，适用于高并发且处理简单的场景，比如聊天软件。</li>
+<li>多路复用IO，他的两个步骤处理是分开的，也就是说，一个连接可能他的数据接收是线程a完成的，数据处理是线程b完成的，他比BIO能处理更多请求，但是比不上NIO，但是他的处理性能又比BIO更差，因为一个连接他需要两次system call，而BIO只需要一次，所以这种IO模型应用的不多。</li>
+<li>信号驱动IO，这种IO模型主要用在嵌入式开发，不参与讨论。</li>
+<li>异步IO，他的数据请求和数据处理都是异步的，数据请求一次返回一次，适用于长连接的业务场景。</li>
+</ul>
+<p>以上摘自<a href="https://segmentfault.com/a/1190000003063859" target="_blank" rel="noopener">Linux IO模式及 select、poll、epoll详解</a></p>
+<h4 id="传输快"><a href="#传输快" class="headerlink" title="传输快"></a>传输快</h4><p>Netty的传输快其实也是依赖了NIO的一个特性——零拷贝。我们知道，Java的内存有堆内存、栈内存和字符串常量池等等，其中堆内存是占用内存空间最大的一块，也是Java对象存放的地方，一般我们的数据如果需要从IO读取到堆内存，中间需要经过Socket缓冲区，也就是说一个数据会被拷贝两次才能到达他的的终点，如果数据量大，就会造成不必要的资源浪费。<br>Netty针对这种情况，使用了NIO中的另一大特性——零拷贝，当他需要接收数据的时候，他会在堆内存之外开辟一块内存，数据就直接从IO读到了那块内存中去，在netty里面通过ByteBuf可以直接对这些数据进行直接操作，从而加快了传输速度。<br>下两图就介绍了两种拷贝方式的区别，摘自<a href="https://www.ibm.com/developerworks/cn/linux/l-cn-zerocopy1/index.html" target="_blank" rel="noopener">摘自Linux 中的零拷贝技术，第 1 部分</a><br><img src="/2018/10/12/客服系统一/copy1.png" alt="传统数据拷贝"></p>
+<p><img src="/2018/10/12/客服系统一/0copy.png" alt="零拷贝">  </p>
+<p>上文介绍的ByteBuf是Netty的一个重要概念，他是netty数据处理的容器，也是Netty封装好的一个重要体现，将在下一部分做详细介绍。</p>
+<h4 id="封装好"><a href="#封装好" class="headerlink" title="封装好"></a>封装好</h4><p>要说Netty为什么封装好，这种用文字是说不清的，直接上代码：  </p>
+<ul>
+<li><p>阻塞I/O</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlainOioServer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">serve</span><span class="params">(<span class="keyword">int</span> port)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> ServerSocket socket = <span class="keyword">new</span> ServerSocket(port);     <span class="comment">//1</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                <span class="keyword">final</span> Socket clientSocket = socket.accept();    <span class="comment">//2</span></span><br><span class="line">                System.out.println(<span class="string">"Accepted connection from "</span> + clientSocket);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;                        <span class="comment">//3</span></span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                        OutputStream out;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            out = clientSocket.getOutputStream();</span><br><span class="line">                            out.write(<span class="string">"Hi!\r\n"</span>.getBytes(Charset.forName(<span class="string">"UTF-8"</span>)));                            <span class="comment">//4</span></span><br><span class="line">                            out.flush();</span><br><span class="line">                            clientSocket.close();                <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line">                        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                            <span class="keyword">try</span> &#123;</span><br><span class="line">                                clientSocket.close();</span><br><span class="line">                            &#125; <span class="keyword">catch</span> (IOException ex) &#123;</span><br><span class="line">                                <span class="comment">// ignore on close</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;).start();                                        <span class="comment">//6</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>非阻塞IO</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlainNioServer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">serve</span><span class="params">(<span class="keyword">int</span> port)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        ServerSocketChannel serverChannel = ServerSocketChannel.open();</span><br><span class="line">        serverChannel.configureBlocking(<span class="keyword">false</span>);</span><br><span class="line">        ServerSocket ss = serverChannel.socket();</span><br><span class="line">        InetSocketAddress address = <span class="keyword">new</span> InetSocketAddress(port);</span><br><span class="line">        ss.bind(address);                                            <span class="comment">//1</span></span><br><span class="line">        Selector selector = Selector.open();                        <span class="comment">//2</span></span><br><span class="line">        serverChannel.register(selector, SelectionKey.OP_ACCEPT);    <span class="comment">//3</span></span><br><span class="line">        <span class="keyword">final</span> ByteBuffer msg = ByteBuffer.wrap(<span class="string">"Hi!\r\n"</span>.getBytes());</span><br><span class="line">        <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                selector.select();                                    <span class="comment">//4</span></span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException ex) &#123;</span><br><span class="line">                ex.printStackTrace();</span><br><span class="line">                <span class="comment">// handle exception</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            Set&lt;SelectionKey&gt; readyKeys = selector.selectedKeys();    <span class="comment">//5</span></span><br><span class="line">            Iterator&lt;SelectionKey&gt; iterator = readyKeys.iterator();</span><br><span class="line">            <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">                SelectionKey key = iterator.next();</span><br><span class="line">                iterator.remove();</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (key.isAcceptable()) &#123;                <span class="comment">//6</span></span><br><span class="line">                        ServerSocketChannel server =</span><br><span class="line">                                (ServerSocketChannel)key.channel();</span><br><span class="line">                        SocketChannel client = server.accept();</span><br><span class="line">                        client.configureBlocking(<span class="keyword">false</span>);</span><br><span class="line">                        client.register(selector, SelectionKey.OP_WRITE |</span><br><span class="line">                                SelectionKey.OP_READ, msg.duplicate());    <span class="comment">//7</span></span><br><span class="line">                        System.out.println(</span><br><span class="line">                                <span class="string">"Accepted connection from "</span> + client);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (key.isWritable()) &#123;                <span class="comment">//8</span></span><br><span class="line">                        SocketChannel client =</span><br><span class="line">                                (SocketChannel)key.channel();</span><br><span class="line">                        ByteBuffer buffer =</span><br><span class="line">                                (ByteBuffer)key.attachment();</span><br><span class="line">                        <span class="keyword">while</span> (buffer.hasRemaining()) &#123;</span><br><span class="line">                            <span class="keyword">if</span> (client.write(buffer) == <span class="number">0</span>) &#123;        <span class="comment">//9</span></span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                        client.close();                    <span class="comment">//10</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException ex) &#123;</span><br><span class="line">                    key.cancel();</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        key.channel().close();</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (IOException cex) &#123;</span><br><span class="line">                        <span class="comment">// 在关闭时忽略</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Netty</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NettyOioServer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">server</span><span class="params">(<span class="keyword">int</span> port)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> ByteBuf buf = Unpooled.unreleasableBuffer(</span><br><span class="line">                Unpooled.copiedBuffer(<span class="string">"Hi!\r\n"</span>, Charset.forName(<span class="string">"UTF-8"</span>)));</span><br><span class="line">        EventLoopGroup group = <span class="keyword">new</span> OioEventLoopGroup();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            ServerBootstrap b = <span class="keyword">new</span> ServerBootstrap();        <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line">            b.group(group)                                    <span class="comment">//2</span></span><br><span class="line">             .channel(OioServerSocketChannel.class)</span><br><span class="line">             .localAddress(<span class="keyword">new</span> InetSocketAddress(port))</span><br><span class="line">             .childHandler(<span class="keyword">new</span> ChannelInitializer&lt;SocketChannel&gt;() &#123;<span class="comment">//3</span></span><br><span class="line">                 <span class="meta">@Override</span></span><br><span class="line">                 <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initChannel</span><span class="params">(SocketChannel ch)</span> </span></span><br><span class="line"><span class="function">                     <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                     ch.pipeline().addLast(<span class="keyword">new</span> ChannelInboundHandlerAdapter() &#123;            <span class="comment">//4</span></span><br><span class="line">                         <span class="meta">@Override</span></span><br><span class="line">                         <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">channelActive</span><span class="params">(ChannelHandlerContext ctx)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                             ctx.writeAndFlush(buf.duplicate()).addListener(ChannelFutureListener.CLOSE);<span class="comment">//5</span></span><br><span class="line">                         &#125;</span><br><span class="line">                     &#125;);</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;);</span><br><span class="line">            ChannelFuture f = b.bind().sync();  <span class="comment">//6</span></span><br><span class="line">            f.channel().closeFuture().sync();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            group.shutdownGracefully().sync();        <span class="comment">//7</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>从代码量上来看，Netty就已经秒杀传统Socket编程了，但是这一部分博大精深，仅仅贴几个代码岂能说明问题，在这里给大家介绍一下Netty的一些重要概念，让大家更理解Netty。  </p>
+<ul>
+<li>Channel<br>数据传输流，与channel相关的概念有以下四个，上一张图让你了解netty里面的Channel。<br><img src="/2018/10/12/客服系统一/channel.png" alt="Channel一览">  <ul>
+<li>Channel，表示一个连接，可以理解为每一个请求，就是一个Channel。</li>
+<li>ChannelHandler，核心处理业务就在这里，用于处理业务请求。</li>
+<li>ChannelHandlerContext，用于传输业务数据。</li>
+<li>ChannelPipeline，用于保存处理过程需要用到的ChannelHandler和ChannelHandlerContext.</li>
+</ul>
+</li>
+<li>ByteBuf<br>ByteBuf是一个存储字节的容器，最大特点就是使用方便，它既有自己的读索引和写索引，方便你对整段字节缓存进行读写，也支持get/set，方便你对其中每一个字节进行读写，他的数据结构如下图所示：<br><img src="/2018/10/12/客服系统一/buff.png" alt="ByteBuf数据结构"><br>他有三种使用模式：<ol>
+<li>Heap Buffer 堆缓冲区<br>堆缓冲区是ByteBuf最常用的模式，他将数据存储在堆空间。</li>
+<li>Direct Buffer 直接缓冲区<br>直接缓冲区是ByteBuf的另外一种常用模式，他的内存分配都不发生在堆，jdk1.4引入的nio的ByteBuffer类允许jvm通过本地方法调用分配内存，这样做有两个好处<ul>
+<li>通过免去中间交换的内存拷贝, 提升IO处理速度; 直接缓冲区的内容可以驻留在垃圾回收扫描的堆区以外。</li>
+<li>DirectBuffer 在 -XX:MaxDirectMemorySize=xxM大小限制下, 使用 Heap 之外的内存, GC对此”无能为力”,也就意味着规避了在高负载下频繁的GC过程对应用线程的中断影响.</li>
+</ul>
+</li>
+<li>Composite Buffer 复合缓冲区<br>复合缓冲区相当于多个不同ByteBuf的视图，这是netty提供的，jdk不提供这样的功能。<br>除此之外，他还提供一大堆api方便你使用，在这里我就不一一列出了，具体参见<a href="https://waylau.gitbooks.io/essential-netty-in-action/content/CORE%20FUNCTIONS/Buffers.html" target="_blank" rel="noopener">ByteBuf字节缓存</a>。</li>
+</ol>
+</li>
+<li>Codec<br>Netty中的编码/解码器，通过他你能完成字节与pojo、pojo与pojo的相互转换，从而达到自定义协议的目的。<br>在Netty里面最有名的就是HttpRequestDecoder和HttpResponseEncoder了。</li>
+</ul>
+<h2 id="三、MongoDB介绍"><a href="#三、MongoDB介绍" class="headerlink" title="三、MongoDB介绍"></a>三、MongoDB介绍</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>MongoDB是用C++语言编写的非关系型数据库。特点是高性能、易部署、易使用，存储数据十分方便，主要特性有： </p>
+<ul>
+<li>面向集合存储，易于存储对象类型的数据 </li>
+<li>模式自由 </li>
+<li>支持动态查询 </li>
+<li>支持完全索引，包含内部对象 </li>
+<li>支持复制和故障恢复 </li>
+<li>使用高效的二进制数据存储，包括大型对象 </li>
+<li>文件存储格式为BSON(一种JSON的扩展)</li>
+</ul>
+<h3 id="MongoDB和关系数据库的对比"><a href="#MongoDB和关系数据库的对比" class="headerlink" title="MongoDB和关系数据库的对比"></a>MongoDB和关系数据库的对比</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">对比项</th>
+<th style="text-align:left">mongoDB</th>
+<th style="text-align:left">mysql oracle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">表</td>
+<td style="text-align:left">集合</td>
+<td style="text-align:left">二维表table</td>
+</tr>
+<tr>
+<td style="text-align:left">表的一行数据</td>
+<td style="text-align:left">文档document</td>
+<td style="text-align:left">一条记录recoder</td>
+</tr>
+<tr>
+<td style="text-align:left">表字段</td>
+<td style="text-align:left">键key</td>
+<td style="text-align:left">字段filed</td>
+</tr>
+<tr>
+<td style="text-align:left">字段值</td>
+<td style="text-align:left">值value</td>
+<td style="text-align:left">值value</td>
+</tr>
+<tr>
+<td style="text-align:left">主外键</td>
+<td style="text-align:left">无</td>
+<td style="text-align:left">PK FK</td>
+</tr>
+<tr>
+<td style="text-align:left">灵活度扩展性</td>
+<td style="text-align:left">极高</td>
+<td style="text-align:left">差</td>
+</tr>
+</tbody>
+</table>
+<h3 id="MongoDB基本概念"><a href="#MongoDB基本概念" class="headerlink" title="MongoDB基本概念"></a>MongoDB基本概念</h3><ul>
+<li>文档(document)是MongoDB中数据的基本单元，非常类似于关系型数据库系统中的行(但是比行要复杂的多)。</li>
+<li>集合(collection)就是一组文档，如果说MongoDB中的文档类似于关系型数据库中的行，那么集合就如同表。</li>
+<li>MongoDB的单个计算机可以容纳多个独立的数据库，每一个数据库都有自己的集合和权限。</li>
+<li>MongoDB自带简洁但功能强大的JavaScript shell，这个工具对于管理MongoDB实例和操作数据作用非常大。</li>
+<li>每一个文档都有一个特殊的键”_id”,它在文档所处的集合中是唯一的，相当于关系数据库中的表的主键。</li>
+</ul>
+<h3 id="MongoDB数据类型"><a href="#MongoDB数据类型" class="headerlink" title="MongoDB数据类型"></a>MongoDB数据类型</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">null</td>
+<td style="text-align:left">表示空值或者未定义的对象</td>
+<td style="text-align:left">{“x”:null}</td>
+</tr>
+<tr>
+<td style="text-align:left">布尔值</td>
+<td style="text-align:left">真或者假：true或者false</td>
+<td style="text-align:left">{“x”:true}</td>
+</tr>
+<tr>
+<td style="text-align:left">32位整数</td>
+<td style="text-align:left">32位整数。shell是不支持该类型的，shell中默认会转换成64位浮点数</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">64位整数</td>
+<td style="text-align:left">64位整数。shell是不支持该类型的，shell中默认会转换成64位浮点数</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">64位浮点数</td>
+<td style="text-align:left">64位浮点数。shell中的数字就是这一种类型</td>
+<td style="text-align:left">{“x”：3.14，”y”：3}</td>
+</tr>
+<tr>
+<td style="text-align:left">字符串</td>
+<td style="text-align:left">UTF-8字符串</td>
+<td style="text-align:left">{“foo”:”bar”}</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">符号</td>
+<td style="text-align:left">shell不支持，shell会将数据库中的符号类型的数据自动转换成字符串</td>
+</tr>
+<tr>
+<td style="text-align:left">对象id</td>
+<td style="text-align:left">文档的12字节的唯一id</td>
+<td style="text-align:left">{“id”: ObjectId()}</td>
+</tr>
+<tr>
+<td style="text-align:left">日期</td>
+<td style="text-align:left">从标准纪元开始的毫秒数</td>
+<td style="text-align:left">{“date”:new Date()}</td>
+</tr>
+<tr>
+<td style="text-align:left">正则表达式</td>
+<td style="text-align:left">文档中可以包含正则表达式，遵循JavaScript的语法</td>
+<td style="text-align:left">{“foo”:/foobar/i}</td>
+</tr>
+<tr>
+<td style="text-align:left">代码</td>
+<td style="text-align:left">文档中可以包含JavaScript代码</td>
+<td style="text-align:left">{“x”：function() {}}</td>
+</tr>
+<tr>
+<td style="text-align:left">未定义</td>
+<td style="text-align:left">undefined</td>
+<td style="text-align:left">{“x”：undefined}</td>
+</tr>
+<tr>
+<td style="text-align:left">数组</td>
+<td style="text-align:left">值的集合或者列表</td>
+<td style="text-align:left">{“arr”: [“a”,”b”]}</td>
+</tr>
+<tr>
+<td style="text-align:left">内嵌文档</td>
+<td style="text-align:left">文档可以作为文档中某个key的value</td>
+<td style="text-align:left">{“x”:{“foo”:”bar”}}</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2018/10/12/客服系统一/">客服系统一</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Xu Jing 的个人博客">Xu Jing</a></p>
+  <p><span>发布时间:</span>2018年10月12日 - 14:10</p>
+  <p><span>最后更新:</span>2019年03月06日 - 14:03</p>
+  <p><span>原始链接:</span><a href="/2018/10/12/客服系统一/" title="客服系统一">http://www.jingxu.top/2018/10/12/客服系统一/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jingxu.top/2018/10/12/客服系统一/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+          
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/im/" rel="tag"><i class="fa fa-tag"></i> im</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/30/极光推送的配置与使用/" rel="next" title="极光推送的配置与使用">
+                <i class="fa fa-chevron-left"></i> 极光推送的配置与使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/02/使用solr优化商品搜索效率/" rel="prev" title="使用solr优化商品搜索效率">
+                使用solr优化商品搜索效率 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+     <div id="gitalk-container"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/head.jpg"
+                alt="Xu Jing" />
+            
+              <p class="site-author-name" itemprop="name">Xu Jing</p>
+              <p class="site-description motion-element" itemprop="description">人家说了再做，我是做了再说，人家说了也不一定做，我是做了也不一定说。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/xujinga" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/3885320000/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="微博"><i class="fa fa-fw fa-weibo"></i>微博</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、技术栈选择"><span class="nav-text">一、技术栈选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Netty"><span class="nav-text">Netty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB"><span class="nav-text">MongoDB</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Netty介绍"><span class="nav-text">二、Netty介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Netty？"><span class="nav-text">什么是Netty？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么Netty受欢迎？"><span class="nav-text">为什么Netty受欢迎？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#并发高"><span class="nav-text">并发高</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传输快"><span class="nav-text">传输快</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装好"><span class="nav-text">封装好</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、MongoDB介绍"><span class="nav-text">三、MongoDB介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB和关系数据库的对比"><span class="nav-text">MongoDB和关系数据库的对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB基本概念"><span class="nav-text">MongoDB基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB数据类型"><span class="nav-text">MongoDB数据类型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xu Jing</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      总访客量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '23bd7ca53abc651064fc',
+          clientSecret: '2095b60025750e5c673b337c45cf4831aa0873b1',
+          repo: 'comments',
+          owner: 'xujinga',
+          admin: ['xujinga'],
+          id: ['客服系统一'],
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')
+       </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
