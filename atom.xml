@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jingxu.top/"/>
-  <updated>2019-03-27T08:26:39.747Z</updated>
+  <updated>2019-03-29T07:42:26.516Z</updated>
   <id>http://www.jingxu.top/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>word转pdf实现在线预览</title>
+    <link href="http://www.jingxu.top/2019/03/29/word%E8%BD%ACpdf%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88/"/>
+    <id>http://www.jingxu.top/2019/03/29/word转pdf实现在线预览/</id>
+    <published>2019-03-29T07:02:50.000Z</published>
+    <updated>2019-03-29T07:42:26.516Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2019/03/29/word转pdf实现在线预览/top.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具类" scheme="http://www.jingxu.top/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    
+    
+      <category term="tool" scheme="http://www.jingxu.top/tags/tool/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用七牛云做图片上传</title>
     <link href="http://www.jingxu.top/2019/03/27/%E4%BD%BF%E7%94%A8%E4%B8%83%E7%89%9B%E4%BA%91%E5%81%9A%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/"/>
     <id>http://www.jingxu.top/2019/03/27/使用七牛云做图片上传/</id>
     <published>2019-03-27T07:48:36.000Z</published>
-    <updated>2019-03-27T08:26:39.747Z</updated>
+    <updated>2019-03-29T07:07:49.398Z</updated>
     
     <summary type="html">
     
@@ -29,10 +49,10 @@
     
     </summary>
     
-      <category term="七牛云" scheme="http://www.jingxu.top/categories/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+      <category term="工具类" scheme="http://www.jingxu.top/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
     
-      <category term="七牛云" scheme="http://www.jingxu.top/tags/%E4%B8%83%E7%89%9B%E4%BA%91/"/>
+      <category term="tool" scheme="http://www.jingxu.top/tags/tool/"/>
     
   </entry>
   
@@ -41,7 +61,7 @@
     <link href="http://www.jingxu.top/2019/03/06/%E4%BD%BF%E7%94%A8hutool%E5%AF%BC%E5%87%BAexcel/"/>
     <id>http://www.jingxu.top/2019/03/06/使用hutool导出excel/</id>
     <published>2019-03-06T06:21:47.000Z</published>
-    <updated>2019-03-06T06:42:09.202Z</updated>
+    <updated>2019-03-29T07:08:18.321Z</updated>
     
     <summary type="html">
     
@@ -49,10 +69,10 @@
     
     </summary>
     
-      <category term="tool" scheme="http://www.jingxu.top/categories/tool/"/>
+      <category term="工具类" scheme="http://www.jingxu.top/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
     
-      <category term="工具类" scheme="http://www.jingxu.top/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+      <category term="tool" scheme="http://www.jingxu.top/tags/tool/"/>
     
   </entry>
   
@@ -81,7 +101,7 @@
     <link href="http://www.jingxu.top/2018/11/02/%E4%BD%BF%E7%94%A8javaMail%E5%81%9A%E5%BC%82%E5%B8%B8%E6%8F%90%E9%86%92/"/>
     <id>http://www.jingxu.top/2018/11/02/使用javaMail做异常提醒/</id>
     <published>2018-11-02T06:08:19.000Z</published>
-    <updated>2019-03-06T06:08:40.426Z</updated>
+    <updated>2019-03-29T07:07:57.003Z</updated>
     
     <summary type="html">
     
@@ -89,10 +109,10 @@
     
     </summary>
     
-      <category term="javaMail" scheme="http://www.jingxu.top/categories/javaMail/"/>
+      <category term="工具类" scheme="http://www.jingxu.top/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
     
-      <category term="javaMail" scheme="http://www.jingxu.top/tags/javaMail/"/>
+      <category term="tool" scheme="http://www.jingxu.top/tags/tool/"/>
     
   </entry>
   
@@ -141,7 +161,7 @@
     <link href="http://www.jingxu.top/2018/09/30/%E6%9E%81%E5%85%89%E6%8E%A8%E9%80%81%E7%9A%84%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.jingxu.top/2018/09/30/极光推送的配置与使用/</id>
     <published>2018-09-30T06:23:04.000Z</published>
-    <updated>2019-03-06T06:08:40.483Z</updated>
+    <updated>2019-03-29T07:08:11.063Z</updated>
     
     <summary type="html">
     
@@ -149,10 +169,10 @@
     
     </summary>
     
-      <category term="极光推送" scheme="http://www.jingxu.top/categories/%E6%9E%81%E5%85%89%E6%8E%A8%E9%80%81/"/>
+      <category term="工具类" scheme="http://www.jingxu.top/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
     
-      <category term="极光推送配置与使用" scheme="http://www.jingxu.top/tags/%E6%9E%81%E5%85%89%E6%8E%A8%E9%80%81%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+      <category term="tool" scheme="http://www.jingxu.top/tags/tool/"/>
     
   </entry>
   
