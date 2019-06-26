@@ -137,7 +137,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.jingxu.top/2019/06/26/设计模式-简单工厂模式/head.jpg">
 <meta property="og:image" content="http://www.jingxu.top/2019/06/26/设计模式-简单工厂模式/test.jpg">
-<meta property="og:updated_time" content="2019-06-26T13:15:13.591Z">
+<meta property="og:updated_time" content="2019-06-26T13:17:07.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-简单工厂模式">
 <meta name="twitter:image" content="http://www.jingxu.top/2019/06/26/设计模式-简单工厂模式/head.jpg">
@@ -402,7 +402,7 @@
                 
               
 
-              <time title="创建时间：2019-06-26 20:47:27 / 修改时间：21:15:13" itemprop="dateCreated datePublished" datetime="2019-06-26T20:47:27+08:00">2019-06-26</time>
+              <time title="创建时间：2019-06-26 20:47:27 / 修改时间：21:17:07" itemprop="dateCreated datePublished" datetime="2019-06-26T20:47:27+08:00">2019-06-26</time>
             
 
             
@@ -470,8 +470,8 @@
       
         <p><img src="/2019/06/26/设计模式-简单工厂模式/head.jpg" alt=""><a id="more"></a></p>
 <h2 id="一、什么是简单工厂模式"><a href="#一、什么是简单工厂模式" class="headerlink" title="一、什么是简单工厂模式"></a>一、什么是简单工厂模式</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;简单工厂模式属于类的创建型模式,又叫做静态工厂方法模式。通过专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类</p>
-<h2 id="二、模式中包含的角色及其职责"><a href="#二、模式中包含的角色及其职责" class="headerlink" title="二、模式中包含的角色及其职责"></a>二、模式中包含的角色及其职责</h2><h3 id="工厂（Creator）角色"><a href="#工厂（Creator）角色" class="headerlink" title="工厂（Creator）角色"></a>工厂（Creator）角色</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;简单工厂模式的核心，它负责实现创建所有实例的内部逻辑。工厂类可以被外界直接调用，创建所需的产品对象。</p>
-<h3 id="抽象（Product）角色"><a href="#抽象（Product）角色" class="headerlink" title="抽象（Product）角色"></a>抽象（Product）角色</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;简单工厂模式所创建的所有对象的父类，它负责描述所有实例所共有的公共接口。</p>
+<h2 id="二、模式中包含的角色及其职责"><a href="#二、模式中包含的角色及其职责" class="headerlink" title="二、模式中包含的角色及其职责"></a>二、模式中包含的角色及其职责</h2><h3 id="工厂（Creator）角色"><a href="#工厂（Creator）角色" class="headerlink" title="工厂（Creator）角色"></a>工厂（Creator）角色</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;简单工厂模式的核心，它负责实现创建所有实例的内部逻辑。工厂类可以被外界直接调用，创建所需的产品对象。</p>
+<h3 id="抽象（Product）角色"><a href="#抽象（Product）角色" class="headerlink" title="抽象（Product）角色"></a>抽象（Product）角色</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;简单工厂模式所创建的所有对象的父类，它负责描述所有实例所共有的公共接口。</p>
 <h3 id="具体产品（Concrete-Product）角色"><a href="#具体产品（Concrete-Product）角色" class="headerlink" title="具体产品（Concrete Product）角色"></a>具体产品（Concrete Product）角色</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;简单工厂模式所创建的具体实例对象。</p>
 <h2 id="三、java案例代码"><a href="#三、java案例代码" class="headerlink" title="三、java案例代码"></a>三、java案例代码</h2><p>1.抽象产品角色<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>2.具体产品角色<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">implements</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"采集苹果"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Banana</span> <span class="keyword">implements</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"采集香蕉"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
