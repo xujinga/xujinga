@@ -137,7 +137,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.jingxu.top/2019/06/27/设计模式-工厂方法模式/head.jpg">
 <meta property="og:image" content="http://www.jingxu.top/2019/06/27/设计模式-工厂方法模式/test.jpg">
-<meta property="og:updated_time" content="2019-06-27T12:29:48.705Z">
+<meta property="og:updated_time" content="2019-06-29T05:23:12.965Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-工厂方法模式">
 <meta name="twitter:image" content="http://www.jingxu.top/2019/06/27/设计模式-工厂方法模式/head.jpg">
@@ -402,12 +402,24 @@
                 
               
 
-              <time title="创建时间：2019-06-27 19:55:05 / 修改时间：20:29:48" itemprop="dateCreated datePublished" datetime="2019-06-27T19:55:05+08:00">2019-06-27</time>
+              <time title="创建时间：2019-06-27 19:55:05" itemprop="dateCreated datePublished" datetime="2019-06-27T19:55:05+08:00">2019-06-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-29 13:23:12" itemprop="dateModified" datetime="2019-06-29T13:23:12+08:00">2019-06-29</time>
               
             
           </span>
@@ -480,7 +492,7 @@
 <p>4.具体产品角色<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">implements</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"采集苹果"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Banana</span> <span class="keyword">implements</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"采集香蕉"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>5.测试代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        FruitFactory appleFactory = <span class="keyword">new</span> AppleFactory();</span><br><span class="line">        Fruit apple = appleFactory.getFruit();</span><br><span class="line">        apple.get();</span><br><span class="line"></span><br><span class="line">        FruitFactory bananeFactory = <span class="keyword">new</span> BananaFactory();</span><br><span class="line">        Fruit banana = bananeFactory.getFruit();</span><br><span class="line">        banana.get();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>6.测试代码打印结果<br><img src="/2019/06/27/设计模式-工厂方法模式/test.jpg" alt=""></p>
-<h2 id="三、简单工厂模式的优缺点"><a href="#三、简单工厂模式的优缺点" class="headerlink" title="三、简单工厂模式的优缺点"></a>三、简单工厂模式的优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<h2 id="三、工厂方法模式的优缺点"><a href="#三、工厂方法模式的优缺点" class="headerlink" title="三、工厂方法模式的优缺点"></a>三、工厂方法模式的优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
 <li><p>更符合开-闭原则<br>新增一种产品时，只需要增加相应的具体产品类和相应的工厂子类即可<br>简单工厂模式需要修改工厂类的判断逻辑</p>
 </li>
 <li><p>符合单一职责原则<br>每个具体工厂类只负责创建对应的产品<br>简单工厂中的工厂类存在复杂的switch逻辑判断</p>
@@ -488,7 +500,7 @@
 <li><p>不使用静态工厂方法，可以形成基于继承的等级结构。<br>简单工厂模式的工厂类使用静态工厂方法</p>
 </li>
 </ul>
-<p>总结：工厂模式可以说是简单工厂模式的进一步抽象和拓展，在保留了简单工厂的封装优点的同时，让扩展变得简单，让继承变得可行，增加了多态性的体现。</p>
+<p>总结：工厂方法模式可以说是简单工厂模式的进一步抽象和拓展，在保留了简单工厂的封装优点的同时，让扩展变得简单，让继承变得可行，增加了多态性的体现。</p>
 <h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
 <li>添加新产品时，除了增加新产品类外，还要提供与之对应的具体工厂类，系统类的个数将成对增加，在一定程度上增加了系统的复杂度；同时，有更多的类需要编译和运行，会给系统带来一些额外的开销；</li>
 <li>由于考虑到系统的可扩展性，需要引入抽象层，在客户端代码中均使用抽象层进行定义，增加了系统的抽象性和理解难度，且在实现时可能需要用到DOM、反射等技术，增加了系统的实现难度。</li>
@@ -517,7 +529,7 @@
   <p><span>本文标题:</span><a href="/2019/06/27/设计模式-工厂方法模式/">设计模式-工厂方法模式</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Xu Jing 的个人博客">Xu Jing</a></p>
   <p><span>发布时间:</span>2019年06月27日 - 19:06</p>
-  <p><span>最后更新:</span>2019年06月27日 - 20:06</p>
+  <p><span>最后更新:</span>2019年06月29日 - 13:06</p>
   <p><span>原始链接:</span><a href="/2019/06/27/设计模式-工厂方法模式/" title="设计模式-工厂方法模式">http://www.jingxu.top/2019/06/27/设计模式-工厂方法模式/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jingxu.top/2019/06/27/设计模式-工厂方法模式/"  aria-label="复制成功！"></i></span>
   </p>
@@ -586,6 +598,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/29/设计模式-抽象工厂模式/" rel="prev" title="设计模式-抽象工厂模式">
+                设计模式-抽象工厂模式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -663,7 +679,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -770,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是工厂方法模式"><span class="nav-text">一、什么是工厂方法模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、模式中包含的角色及其职责"><span class="nav-text">二、模式中包含的角色及其职责</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象工厂（Creator）角色"><span class="nav-text">抽象工厂（Creator）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体工厂（-Concrete-Creator）角色"><span class="nav-text">具体工厂（ Concrete  Creator）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象（Product）角色"><span class="nav-text">抽象（Product）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体产品（Concrete-Product）角色"><span class="nav-text">具体产品（Concrete Product）角色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、java案例代码"><span class="nav-text">三、java案例代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、简单工厂模式的优缺点"><span class="nav-text">三、简单工厂模式的优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-text">缺点</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是工厂方法模式"><span class="nav-text">一、什么是工厂方法模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、模式中包含的角色及其职责"><span class="nav-text">二、模式中包含的角色及其职责</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象工厂（Creator）角色"><span class="nav-text">抽象工厂（Creator）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体工厂（-Concrete-Creator）角色"><span class="nav-text">具体工厂（ Concrete  Creator）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象（Product）角色"><span class="nav-text">抽象（Product）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体产品（Concrete-Product）角色"><span class="nav-text">具体产品（Concrete Product）角色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、java案例代码"><span class="nav-text">三、java案例代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、工厂方法模式的优缺点"><span class="nav-text">三、工厂方法模式的优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-text">缺点</span></a></li></ol></li></ol></div>
             
 
           </div>
