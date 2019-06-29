@@ -139,7 +139,7 @@
 <meta property="og:image" content="http://www.jingxu.top/2019/06/29/设计模式-抽象工厂模式/3.jpg">
 <meta property="og:image" content="http://www.jingxu.top/2019/06/29/设计模式-抽象工厂模式/4.jpeg">
 <meta property="og:image" content="http://www.jingxu.top/2019/06/29/设计模式-抽象工厂模式/test.jpg">
-<meta property="og:updated_time" content="2019-06-29T05:33:10.351Z">
+<meta property="og:updated_time" content="2019-06-29T05:41:38.763Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式-抽象工厂模式">
 <meta name="twitter:image" content="http://www.jingxu.top/2019/06/29/设计模式-抽象工厂模式/head.png">
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-06-29 12:34:46 / 修改时间：13:33:10" itemprop="dateCreated datePublished" datetime="2019-06-29T12:34:46+08:00">2019-06-29</time>
+              <time title="创建时间：2019-06-29 12:34:46 / 修改时间：13:41:38" itemprop="dateCreated datePublished" datetime="2019-06-29T12:34:46+08:00">2019-06-29</time>
             
 
             
@@ -495,7 +495,7 @@
 <li><p>它让具体的创建实例过程与客户端分离，客户端是通过它们的抽象接口操纵实例，产品的具体类名也被具体工厂的实现分离，不会出现在客户代码中。</p>
 </li>
 </ul>
-<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><ul>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
 <li>如果要增加一个格力产品族，那么就需要增加三个类，GeliFactory，GeliTV，GeliRefrigerator，如果要增加一个产品等级 空调（ac），需要改动HomeApplianceFactory，HaierFactory，MeidiFactory,并且增加AC,HaierAC,MeidiAc才可以完全实现。这样是很糟糕的。编程是门艺术，这样大批量的改动，显然是非常丑陋的做法。</li>
 </ul>
 <p>解决方案：可以使用简单工厂来改进抽象工厂。去除HomeApplianceFactory，HaierFactory，MeidiFactory三个工厂类，用一个Factory类代替，用一个简单工厂模式来实现。具体实现代码省略，有兴趣的小伙伴可以自己实现。</p>
@@ -774,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是抽象工厂模式"><span class="nav-text">一、什么是抽象工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、产品族与产品等级结构"><span class="nav-text">二、产品族与产品等级结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、模式中包含的角色及其职责"><span class="nav-text">三、模式中包含的角色及其职责</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象工厂（Creator）角色"><span class="nav-text">抽象工厂（Creator）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体工厂（-Concrete-Creator）角色"><span class="nav-text">具体工厂（ Concrete  Creator）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象（Product）角色"><span class="nav-text">抽象（Product）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体产品（Concrete-Product）角色"><span class="nav-text">具体产品（Concrete Product）角色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、java案例代码"><span class="nav-text">四、java案例代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、抽象工厂模式的优缺点"><span class="nav-text">五、抽象工厂模式的优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点："><span class="nav-text">缺点：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是抽象工厂模式"><span class="nav-text">一、什么是抽象工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、产品族与产品等级结构"><span class="nav-text">二、产品族与产品等级结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、模式中包含的角色及其职责"><span class="nav-text">三、模式中包含的角色及其职责</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象工厂（Creator）角色"><span class="nav-text">抽象工厂（Creator）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体工厂（-Concrete-Creator）角色"><span class="nav-text">具体工厂（ Concrete  Creator）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象（Product）角色"><span class="nav-text">抽象（Product）角色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体产品（Concrete-Product）角色"><span class="nav-text">具体产品（Concrete Product）角色</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、java案例代码"><span class="nav-text">四、java案例代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、抽象工厂模式的优缺点"><span class="nav-text">五、抽象工厂模式的优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-text">缺点</span></a></li></ol></li></ol></div>
             
 
           </div>
