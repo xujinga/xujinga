@@ -129,17 +129,17 @@
 
 
 
-  <meta name="keywords" content="tool">
+  <meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用hutool导出excel">
-<meta property="og:url" content="http://www.jingxu.top/2019/03/06/使用hutool导出excel/index.html">
+<meta property="og:title" content="设计模式-单例模式">
+<meta property="og:url" content="http://www.jingxu.top/2019/06/30/设计模式-单例模式/index.html">
 <meta property="og:site_name" content="Do First">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.jingxu.top/2019/03/06/使用hutool导出excel/top.jpg">
-<meta property="og:updated_time" content="2019-03-29T07:08:18.321Z">
+<meta property="og:image" content="http://www.jingxu.top/2019/06/30/设计模式-单例模式/head.jpg">
+<meta property="og:updated_time" content="2019-06-30T11:24:17.235Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用hutool导出excel">
-<meta name="twitter:image" content="http://www.jingxu.top/2019/03/06/使用hutool导出excel/top.jpg">
+<meta name="twitter:title" content="设计模式-单例模式">
+<meta name="twitter:image" content="http://www.jingxu.top/2019/06/30/设计模式-单例模式/head.jpg">
 
 
 
@@ -148,7 +148,7 @@
 
 
 
-  <link rel="canonical" href="http://www.jingxu.top/2019/03/06/使用hutool导出excel/"/>
+  <link rel="canonical" href="http://www.jingxu.top/2019/06/30/设计模式-单例模式/"/>
 
 
 
@@ -158,7 +158,7 @@
   };
 </script>
 
-  <title>使用hutool导出excel | Do First</title>
+  <title>设计模式-单例模式 | Do First</title>
   
 
 
@@ -359,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.jingxu.top/2019/03/06/使用hutool导出excel/">
+    <link itemprop="mainEntityOfPage" href="http://www.jingxu.top/2019/06/30/设计模式-单例模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xu Jing">
@@ -376,7 +376,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用hutool导出excel
+          <h1 class="post-title" itemprop="name headline">设计模式-单例模式
               
             
           </h1>
@@ -401,24 +401,12 @@
                 
               
 
-              <time title="创建时间：2019-03-06 14:21:47" itemprop="dateCreated datePublished" datetime="2019-03-06T14:21:47+08:00">2019-03-06</time>
+              <time title="创建时间：2019-06-30 18:57:31 / 修改时间：19:24:17" itemprop="dateCreated datePublished" datetime="2019-06-30T18:57:31+08:00">2019-06-30</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-29 15:08:18" itemprop="dateModified" datetime="2019-03-29T15:08:18+08:00">2019-03-29</time>
               
             
           </span>
@@ -435,7 +423,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具类/" itemprop="url" rel="index"><span itemprop="name">工具类</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a></span>
 
                 
                 
@@ -479,19 +467,19 @@
       
 
       
-        <p><img src="/2019/03/06/使用hutool导出excel/top.jpg" alt=""><a id="more"></a></p>
-<blockquote>
-<p><a href="https://hutool.cn/docs/#/" target="_blank" rel="noopener">Hutool</a>是一个Java工具包，里面有很多非常方便的工具类，<br>之前我们做一个excel导出特别麻烦，逻辑也非常绕，用Hutool几行代码就搞定了，非常方便。</p>
-</blockquote>
-<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h1><h2 id="maven方式"><a href="#maven方式" class="headerlink" title="maven方式"></a>maven方式</h2><p>在项目的pom.xml的dependencies中加入以下内容<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--hutool--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;cn.hutool&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;hutool-all&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;4.5.0&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;!--excel相关--&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;3.17&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;xerces&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;2.11.0&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>说明 poi-ooxml 版本需高于 3.17（别问我3.8版本为啥不行，因为3.17 &gt; 3.8 ） xercesImpl版本高于2.11.0</p>
-</blockquote>
-<h1 id="2-封装自己使用的工具类"><a href="#2-封装自己使用的工具类" class="headerlink" title="2.封装自己使用的工具类"></a>2.封装自己使用的工具类</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExcelUtils</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 写出Bean数据</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> response</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> list     输出到excel的列表</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> map      excel 列和 类的字段对应关系  如 key: name --&gt; value:名字</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> title    excel 标题</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">exportExcel</span><span class="params">(HttpServletResponse response, List list, Map&lt;String, String&gt; map, String title)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//设置输出头</span></span><br><span class="line">        response.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">"attachment;fileName="</span> + <span class="keyword">new</span> String((<span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyyMMddHHmmss"</span>).format(<span class="keyword">new</span> Date()) + <span class="string">".xlsx"</span>).getBytes(<span class="string">"UTF-8"</span>)));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 通过工具类创建writer</span></span><br><span class="line">        ExcelWriter writer = ExcelUtil.getWriter(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//自定义标题别名</span></span><br><span class="line">        Set&lt;Map.Entry&lt;String, String&gt;&gt; entries = map.entrySet();</span><br><span class="line">        Iterator&lt;Map.Entry&lt;String, String&gt;&gt; iterator = entries.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            Map.Entry&lt;String, String&gt; next = iterator.next();</span><br><span class="line">            writer.addHeaderAlias(next.getKey(), next.getValue());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 合并单元格后的标题行，使用默认标题样式</span></span><br><span class="line">        writer.merge(map.size() - <span class="number">1</span>, title);</span><br><span class="line">        <span class="comment">// 一次性写出内容，使用默认样式，强制输出标题</span></span><br><span class="line">        writer.write(list, <span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">//out为OutputStream，需要写出到的目标流</span></span><br><span class="line">        writer.flush(response.getOutputStream());</span><br><span class="line">        <span class="comment">// 关闭writer，释放内存</span></span><br><span class="line">        writer.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 写出map数据</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> response</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> list  输出到excel的列表</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> title excel 标题</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">exportExcel</span><span class="params">(HttpServletResponse response, List&lt;Map&lt;String, Object&gt;&gt; list, String title)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//设置输出头</span></span><br><span class="line">        response.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">"attachment;fileName="</span> + <span class="keyword">new</span> String((<span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyyMMddHHmmss"</span>).format(<span class="keyword">new</span> Date()) + <span class="string">".xlsx"</span>).getBytes(<span class="string">"UTF-8"</span>)));</span><br><span class="line">        <span class="comment">// 通过工具类创建writer</span></span><br><span class="line">        ExcelWriter writer = ExcelUtil.getWriter(<span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">// 合并单元格后的标题行，使用默认标题样式</span></span><br><span class="line">        writer.merge(list.size() - <span class="number">1</span>, title);</span><br><span class="line">        <span class="comment">// 一次性写出内容，使用默认样式，强制输出标题</span></span><br><span class="line">        writer.write(list, <span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">//out为OutputStream，需要写出到的目标流</span></span><br><span class="line">        writer.flush(response.getOutputStream());</span><br><span class="line">        <span class="comment">// 关闭writer，释放内存</span></span><br><span class="line">        writer.close();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>第一个方法的list 里面装的是bean，map装的是bean中英文字段和中文汉字的对应关系。<br>第二个方法list装的是map map里面是类似map.put(“姓名”,”张三”)，map.put(“年龄”,”14”)</p>
-</blockquote>
-<p>几行代码就搞定了，是不是特别简单。我这个是以流的方式给前台，浏览器访问就直接下载了，<br>还有写入文件中的方法，具体的去hutool官方文档，里面有详细介绍</p>
+        <p><img src="/2019/06/30/设计模式-单例模式/head.jpg" alt=""><a id="more"></a></p>
+<h2 id="一、什么是单例模式"><a href="#一、什么是单例模式" class="headerlink" title="一、什么是单例模式"></a>一、什么是单例模式</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;单例模式是一种对象创建型模式，使用单例模式，可以保证为一个类只生成唯一的实例对象。也就是说，在整个程序空间中，该类只存在一个实例对象。<br>&nbsp;&nbsp;&nbsp;&nbsp;其实，GoF对单例模式的定义是：保证一个类、 只有一个实例存在，同时提供能对该实例加以访问的全局访问方法。</p>
+<h2 id="二、为什么要使用单例模式"><a href="#二、为什么要使用单例模式" class="headerlink" title="二、为什么要使用单例模式"></a>二、为什么要使用单例模式</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;在应用系统开发中，我们常常有以下需求：</p>
+<ul>
+<li>在多个线程之间，比如servlet环境，共享同一个资源或者操作同一个对象</li>
+<li>在整个程序空间使用全局变量，共享资源</li>
+<li>大规模系统中，为了性能的考虑，需要节省对象的创建时间等等。</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;因为Singleton模式可以保证为一个类只生成唯一的实例对象，所以这些情况，Singleton模式就派上用场了。</p>
+<h2 id="三、单例模式代码实现"><a href="#三、单例模式代码实现" class="headerlink" title="三、单例模式代码实现"></a>三、单例模式代码实现</h2><h3 id="饿汉式单例模式"><a href="#饿汉式单例模式" class="headerlink" title="饿汉式单例模式"></a>饿汉式单例模式</h3><p>饿汉法就是在第一次引用该类的时候就创建对象实例，而不管实际是否需要创建。这种方法编写简单，线程安全，但大多数要求延迟加载从而减小负载，这种方法不太合适。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 饿汉式单例</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建实例</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton1 singleton1 = <span class="keyword">new</span> Singleton1();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//私有化构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//对外提供获取实例的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton1 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> singleton1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="懒汉式单例模式"><a href="#懒汉式单例模式" class="headerlink" title="懒汉式单例模式"></a>懒汉式单例模式</h3><p>懒汉式是在第一次用到这个对象的时候去实例化这个对象，使用延迟加载的模式。</p>
+<h4 id="单线程模式"><a href="#单线程模式" class="headerlink" title="单线程模式"></a>单线程模式</h4><p>这种写法是最简单的，由私有构造器和一个公有静态工厂方法构成，在工厂方法中对singleton进行null判断，如果是null就new一个出来，最后返回singleton对象。这种方法可以实现延时加载，但是有一个致命弱点：线程不安全。如果有两条线程同时调用getSingleton()方法，就有很大可能导致重复创建对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 懒汉式单例</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton2</span> </span>&#123;</span><br><span class="line">    <span class="comment">//指向实例的静态引用</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton2 singleton2;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//私有化构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//对外提供获取实例的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton2 <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == singleton2) &#123;</span><br><span class="line">            singleton2 = <span class="keyword">new</span> Singleton2();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> singleton2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="多线程模式"><a href="#多线程模式" class="headerlink" title="多线程模式"></a>多线程模式</h3><p>考虑线程安全的写法，是要用到锁的，用到锁就有个效率问题，前两种方法可以做到线程安全，但是效率较差，第三种双重检测的方法可以兼顾效率与线程安全。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 懒汉式单例（线程安全形式）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton3</span> </span>&#123;</span><br><span class="line">    <span class="comment">//指向实例的静态引用</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton3 singleton3;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//私有化构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方法1：整个方法加锁 效率不高</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> Singleton3 <span class="title">getInstance1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == singleton3) &#123;</span><br><span class="line">            singleton3 = <span class="keyword">new</span> Singleton3();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> singleton3;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方法2：和方法一差不多 效率不高</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton3 <span class="title">getInstance2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">synchronized</span> (Singleton3.class) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">null</span> == singleton3) &#123;</span><br><span class="line">                singleton3 = <span class="keyword">new</span> Singleton3();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> singleton3;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方法3：双重检测 最优方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton3 <span class="title">getInstance3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">null</span> == singleton3) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (Singleton3.class) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">null</span> == singleton3) &#123;</span><br><span class="line">                    singleton3 = <span class="keyword">new</span> Singleton3();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> singleton3;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -511,12 +499,12 @@
   <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-  <p><span>本文标题:</span><a href="/2019/03/06/使用hutool导出excel/">使用hutool导出excel</a></p>
+  <p><span>本文标题:</span><a href="/2019/06/30/设计模式-单例模式/">设计模式-单例模式</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Xu Jing 的个人博客">Xu Jing</a></p>
-  <p><span>发布时间:</span>2019年03月06日 - 14:03</p>
-  <p><span>最后更新:</span>2019年03月29日 - 15:03</p>
-  <p><span>原始链接:</span><a href="/2019/03/06/使用hutool导出excel/" title="使用hutool导出excel">http://www.jingxu.top/2019/03/06/使用hutool导出excel/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jingxu.top/2019/03/06/使用hutool导出excel/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年06月30日 - 18:06</p>
+  <p><span>最后更新:</span>2019年06月30日 - 19:06</p>
+  <p><span>原始链接:</span><a href="/2019/06/30/设计模式-单例模式/" title="设计模式-单例模式">http://www.jingxu.top/2019/06/30/设计模式-单例模式/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jingxu.top/2019/06/30/设计模式-单例模式/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -561,7 +549,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tool/" rel="tag"><i class="fa fa-tag"></i> tool</a>
+            <a href="/tags/设计模式/" rel="tag"><i class="fa fa-tag"></i> 设计模式</a>
           
         </div>
       
@@ -574,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/02/客服系统二/" rel="next" title="客服系统二">
-                <i class="fa fa-chevron-left"></i> 客服系统二
+              <a href="/2019/06/29/设计模式-抽象工厂模式/" rel="next" title="设计模式-抽象工厂模式">
+                <i class="fa fa-chevron-left"></i> 设计模式-抽象工厂模式
               </a>
             
           </div>
@@ -583,10 +571,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/27/使用七牛云做图片上传/" rel="prev" title="使用七牛云做图片上传">
-                使用七牛云做图片上传 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -771,7 +755,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-安装"><span class="nav-text">1.安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#maven方式"><span class="nav-text">maven方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-封装自己使用的工具类"><span class="nav-text">2.封装自己使用的工具类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是单例模式"><span class="nav-text">一、什么是单例模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、为什么要使用单例模式"><span class="nav-text">二、为什么要使用单例模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、单例模式代码实现"><span class="nav-text">三、单例模式代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#饿汉式单例模式"><span class="nav-text">饿汉式单例模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#懒汉式单例模式"><span class="nav-text">懒汉式单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单线程模式"><span class="nav-text">单线程模式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多线程模式"><span class="nav-text">多线程模式</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -963,7 +947,7 @@
           repo: 'comments',
           owner: 'xujinga',
           admin: ['xujinga'],
-          id: ['使用hutool导出excel'],
+          id: ['设计模式-单例模式'],
           distractionFreeMode: 'true'
         })
         gitalk.render('gitalk-container')
