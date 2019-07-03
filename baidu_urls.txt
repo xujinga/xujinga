@@ -1,4 +1,4 @@
-hexhttp://www.jingxu.top/2019/07/03/设计模式-原型模式/
+http://www.jingxu.top/2019/07/03/设计模式-原型模式/
 http://www.jingxu.top/2019/06/30/设计模式-单例模式/
 http://www.jingxu.top/2019/06/29/设计模式-抽象工厂模式/
 http://www.jingxu.top/2019/06/27/设计模式-工厂方法模式/
