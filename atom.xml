@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jingxu.top/"/>
-  <updated>2019-06-30T12:05:21.377Z</updated>
+  <updated>2019-07-03T12:52:01.162Z</updated>
   <id>http://www.jingxu.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-原型模式</title>
+    <link href="http://www.jingxu.top/2019/07/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.jingxu.top/2019/07/03/设计模式-原型模式/</id>
+    <published>2019-07-03T12:34:12.000Z</published>
+    <updated>2019-07-03T12:52:01.162Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2019/07/03/设计模式-原型模式/head.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.jingxu.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.jingxu.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-单例模式</title>
