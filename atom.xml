@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Do First</title>
+  <title>Jing&#39;s Blog</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jingxu.top/"/>
-  <updated>2019-07-03T12:52:01.162Z</updated>
+  <updated>2019-07-07T14:00:02.374Z</updated>
   <id>http://www.jingxu.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式-建造者模式</title>
+    <link href="http://www.jingxu.top/2019/07/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://www.jingxu.top/2019/07/07/设计模式-建造者模式/</id>
+    <published>2019-07-07T13:41:51.000Z</published>
+    <updated>2019-07-07T14:00:02.374Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2019/07/07/设计模式-建造者模式/head.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://www.jingxu.top/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://www.jingxu.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式-原型模式</title>
