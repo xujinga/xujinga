@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jingxu.top/"/>
-  <updated>2019-10-22T01:29:49.302Z</updated>
+  <updated>2019-10-24T08:56:44.960Z</updated>
   <id>http://www.jingxu.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在mybatis中使用枚举</title>
+    <link href="http://www.jingxu.top/2019/10/24/%E5%A6%82%E4%BD%95%E5%9C%A8mybatis%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE/"/>
+    <id>http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/</id>
+    <published>2019-10-24T07:57:45.000Z</published>
+    <updated>2019-10-24T08:56:44.960Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2019/10/24/如何在mybatis中使用枚举/mybatis.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="mybatis" scheme="http://www.jingxu.top/categories/mybatis/"/>
+    
+    
+      <category term="mybatis" scheme="http://www.jingxu.top/tags/mybatis/"/>
+    
+  </entry>
   
   <entry>
     <title>使用spring执行定时任务(不需要web环境)</title>

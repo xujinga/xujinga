@@ -129,16 +129,20 @@
 
 
 
-  <meta name="description" content="付出一定会有收获。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jing&#39;s Blog">
-<meta property="og:url" content="http://www.jingxu.top/categories/搜索引擎/index.html">
+  <meta name="keywords" content="mybatis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在mybatis中使用枚举">
+<meta property="og:url" content="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/index.html">
 <meta property="og:site_name" content="Jing&#39;s Blog">
-<meta property="og:description" content="付出一定会有收获。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/mybatis.png">
+<meta property="og:image" content="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/test1.jpg">
+<meta property="og:image" content="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/test2.jpg">
+<meta property="og:image" content="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/test3.jpg">
+<meta property="og:updated_time" content="2019-10-24T08:56:44.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jing&#39;s Blog">
-<meta name="twitter:description" content="付出一定会有收获。">
+<meta name="twitter:title" content="如何在mybatis中使用枚举">
+<meta name="twitter:image" content="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/mybatis.png">
 
 
 
@@ -147,7 +151,7 @@
 
 
 
-  <link rel="canonical" href="http://www.jingxu.top/categories/搜索引擎/"/>
+  <link rel="canonical" href="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/"/>
 
 
 
@@ -157,7 +161,7 @@
   };
 </script>
 
-  <title>分类: 搜索引擎 | Jing's Blog</title>
+  <title>如何在mybatis中使用枚举 | Jing's Blog</title>
   
 
 
@@ -204,7 +208,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="http://www.jingxu.top" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -250,7 +254,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
   </li>
@@ -294,28 +298,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -364,59 +346,277 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>搜索引擎<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xu Jing">
+      <meta itemprop="description" content="付出一定会有收获。">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jing's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/11/02/使用solr优化商品搜索效率/" itemprop="url">
-              
-                <span itemprop="name">使用solr优化商品搜索效率</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">如何在mybatis中使用枚举
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-02T09:57:26+08:00"
-              content="2018-11-02" >
-          11-02
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-24 15:57:45 / 修改时间：16:56:44" itemprop="dateCreated datePublished" datetime="2019-10-24T15:57:45+08:00">2019-10-24</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/mybatis/" itemprop="url" rel="index"><span itemprop="name">mybatis</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+          
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/2019/10/24/如何在mybatis中使用枚举/mybatis.png" alt=""><a id="more"></a></p>
+<h2 id="问题由来"><a href="#问题由来" class="headerlink" title="问题由来"></a>问题由来</h2><p>大家在编码的时候，有时候有很多需要用到枚举，比如性别，年级，各种类型等，这时候数据库存的可能是我们定义的一些代码（如 1 男 2 女），但是返回给前台的时候需要具体的意思，不能返回给前台数字，也可以每次都手动转换，有点麻烦，下面为大家介绍两种方法来解决这种问题。</p>
+<h2 id="使用mybatisPlus解决枚举问题"><a href="#使用mybatisPlus解决枚举问题" class="headerlink" title="使用mybatisPlus解决枚举问题"></a>使用mybatisPlus解决枚举问题</h2><p>这种适合解决一些基本的枚举问题，一对一的那种，具体可以去看 <a href="https://mp.baomidou.com/guide/enum.html" target="_blank" rel="noopener">MybatisPlus官方文档</a>,官方文档介绍的很详细，但是遇到一些一对多的枚举类问题就没办法解决了，比如行业，即是零售业也是烟酒行业等，数据库用一个字段存储，用数组或者某种符号分割，这样mp就没办法处理了，接下来介绍自己如何手动解析枚举类型。</p>
+<h2 id="手动实现类型解析器"><a href="#手动实现类型解析器" class="headerlink" title="手动实现类型解析器"></a>手动实现类型解析器</h2><p>这里举个例子，写的是人与职位，一个人可能会对应多个职位。       </p>
+<ol>
+<li><p>职位枚举类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">public enum PositionEnum &#123;</span><br><span class="line">    JAVA(&quot;java&quot;, &quot;java开发工程师&quot;),</span><br><span class="line">    PYTHON(&quot;python&quot;, &quot;python开发工程师&quot;),</span><br><span class="line">    WEB(&quot;web&quot;, &quot;前端开发工程师&quot;);</span><br><span class="line">    private String value;</span><br><span class="line">    private String desc;</span><br><span class="line">    PositionEnum(String value, String desc) &#123;</span><br><span class="line">        this.value = value;</span><br><span class="line">        this.desc = desc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public String getValue() &#123;</span><br><span class="line">        return this.value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @JsonValue</span><br><span class="line">    public String getDesc() &#123;</span><br><span class="line">        return this.desc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实体类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Data</span><br><span class="line">@EqualsAndHashCode(callSuper = false)</span><br><span class="line">@Accessors(chain = true)</span><br><span class="line">public class User implements Serializable &#123;</span><br><span class="line"></span><br><span class="line">    private static final long serialVersionUID = 1L;</span><br><span class="line"></span><br><span class="line">    private String id;</span><br><span class="line"></span><br><span class="line">    private String name;</span><br><span class="line"></span><br><span class="line">    private List&lt;PositionEnum&gt; position;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>枚举类型解析类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">public class EnumPositionHandler extends BaseTypeHandler&lt;List&lt;PositionEnum&gt;&gt; &#123;</span><br><span class="line">    private static Map&lt;String, PositionEnum&gt; map = new HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        for (PositionEnum positionEnum : PositionEnum.values()) &#123;</span><br><span class="line">            map.put(positionEnum.getValue(), positionEnum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void setNonNullParameter(PreparedStatement preparedStatement, int i, List&lt;PositionEnum&gt; positionEnums, JdbcType jdbcType) throws SQLException &#123;</span><br><span class="line">        String res = &quot;&quot;;</span><br><span class="line">        for (PositionEnum positionEnum : positionEnums) &#123;</span><br><span class="line">            res += positionEnum.getValue();</span><br><span class="line">            if (positionEnums.indexOf(positionEnum) != positionEnums.size() - 1) &#123;</span><br><span class="line">                res += &quot;;&quot;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        preparedStatement.setString(i, res);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;PositionEnum&gt; getNullableResult(ResultSet resultSet, String s) throws SQLException &#123;</span><br><span class="line">        // 根据数据库存储类型决定获取类型，本例子中数据库中存放String类型</span><br><span class="line">        String result = resultSet.getString(s);</span><br><span class="line">        return getAgeEnums(result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;PositionEnum&gt; getNullableResult(ResultSet resultSet, int i) throws SQLException &#123;</span><br><span class="line">        String result = resultSet.getString(i);</span><br><span class="line">        return getAgeEnums(result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public List&lt;PositionEnum&gt; getNullableResult(CallableStatement callableStatement, int i) throws SQLException &#123;</span><br><span class="line">        String result = callableStatement.getString(i);</span><br><span class="line">        return getAgeEnums(result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private List&lt;PositionEnum&gt; getAgeEnums(String result) &#123;</span><br><span class="line">        if (StringUtils.isBlank(result)) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            String[] split = result.split(&quot;;&quot;);</span><br><span class="line">            List&lt;PositionEnum&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">            for (String s1 : split) &#123;</span><br><span class="line">                list.add(map.get(s1));</span><br><span class="line">            &#125;</span><br><span class="line">            return list;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>xml文件<br>在解析枚举字段的时候，需要指定类型转换器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;mapper namespace=&quot;com.xuj.dao.UserMapper&quot;&gt;</span><br><span class="line">    &lt;resultMap type=&quot;User&quot; id=&quot;userMap&quot;&gt;</span><br><span class="line">        &lt;id column=&quot;id&quot; property=&quot;id&quot;/&gt;</span><br><span class="line">        &lt;result column=&quot;name&quot; property=&quot;name&quot;/&gt;</span><br><span class="line">        &lt;result column=&quot;position&quot; property=&quot;position&quot; typeHandler=&quot;com.xuj.enumPackage.EnumPositionHandler&quot;/&gt;</span><br><span class="line">    &lt;/resultMap&gt;</span><br><span class="line"></span><br><span class="line">    &lt;insert id=&quot;save&quot;&gt;</span><br><span class="line">        insert into user (id,name,position) values (#&#123;user.id&#125;,#&#123;user.name&#125;,#&#123;user.position,typeHandler=com.xuj.enumPackage.EnumPositionHandler&#125;)</span><br><span class="line">    &lt;/insert&gt;</span><br><span class="line">    &lt;select id=&quot;selectList&quot; resultMap=&quot;userMap&quot;&gt;</span><br><span class="line">        SELECT * FROM user</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试</p>
+</li>
+</ol>
+<ul>
+<li><p>查询方法<br>数据库数据<br><img src="/2019/10/24/如何在mybatis中使用枚举/test1.jpg" alt=""><br>结果<br><img src="/2019/10/24/如何在mybatis中使用枚举/test2.jpg" alt=""></p>
+</li>
+<li><p>添加方法</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">public void shouldAnswerWithTrue() &#123;</span><br><span class="line">    User user = new User();</span><br><span class="line">    user.setName(&quot;李四&quot;);</span><br><span class="line">    ArrayList&lt;PositionEnum&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">    list.add(PositionEnum.JAVA);</span><br><span class="line">    list.add(PositionEnum.WEB);</span><br><span class="line">    user.setPosition(list);</span><br><span class="line">    userMapper.save(user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  结果<br>  <img src="/2019/10/24/如何在mybatis中使用枚举/test3.jpg" alt=""></p>
+</li>
+</ul>
 
       
     </div>
 
+    
+
+    
+    
+    
+    <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2019/10/24/如何在mybatis中使用枚举/">如何在mybatis中使用枚举</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Xu Jing 的个人博客">Xu Jing</a></p>
+  <p><span>发布时间:</span>2019年10月24日 - 15:10</p>
+  <p><span>最后更新:</span>2019年10月24日 - 16:10</p>
+  <p><span>原始链接:</span><a href="/2019/10/24/如何在mybatis中使用枚举/" title="如何在mybatis中使用枚举">http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.jingxu.top/2019/10/24/如何在mybatis中使用枚举/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          html: false,
+          timer: 500,
+          showConfirmButton: false
+        });
+      });
+    }));
+</script>
+
+
+          
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mybatis/" rel="tag"><i class="fa fa-tag"></i> mybatis</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/16/使用spring执行定时任务-不需要web环境/" rel="next" title="使用spring执行定时任务(不需要web环境)">
+                <i class="fa fa-chevron-left"></i> 使用spring执行定时任务(不需要web环境)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+     <div id="gitalk-container"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -437,8 +637,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -562,6 +771,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题由来"><span class="nav-text">问题由来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用mybatisPlus解决枚举问题"><span class="nav-text">使用mybatisPlus解决枚举问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动实现类型解析器"><span class="nav-text">手动实现类型解析器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -711,6 +936,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
 
   
 
@@ -733,6 +962,22 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '23bd7ca53abc651064fc',
+          clientSecret: '2095b60025750e5c673b337c45cf4831aa0873b1',
+          repo: 'comments',
+          owner: 'xujinga',
+          admin: ['xujinga'],
+          id: ['如何在mybatis中使用枚举'],
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')
+       </script>
 
 
 
