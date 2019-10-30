@@ -1910,7 +1910,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bd41ff;
+  background: #ff8805;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2930,5 +2930,24 @@ hr {
   .footer-inner {
     width: auto;
     text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .main-inner {
+    margin-top: 60px;
+    padding: 60px 60px 60px 60px;
+    background: #fff;
+    opacity: 1;
+    min-height: 500px;
+  }
+  #footer a {
+    color: #eee;
   }
 }

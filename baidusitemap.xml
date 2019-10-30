@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>coding.jingxu.top/2019/10/30/Spring-Cloud2-%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83eureka/</loc>
+    <lastmod>2019-10-30</lastmod>
+  </url>  <url>
     <loc>coding.jingxu.top/2019/10/27/Spring-Cloud1-%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2019-10-27</lastmod>
+    <lastmod>2019-10-30</lastmod>
   </url>  <url>
     <loc>coding.jingxu.top/2019/10/24/%E5%A6%82%E4%BD%95%E5%9C%A8mybatis%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%9E%9A%E4%B8%BE/</loc>
     <lastmod>2019-10-24</lastmod>
